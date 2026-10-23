@@ -1,0 +1,152 @@
+/* The Blockchain Universe — Wild Moon house style.
+   Deep night palette, moon gold, bohemian accents. Mobile-first. */
+:root{
+  --ink:#070b1d;
+  --ink2:#0d1430;
+  --ink3:#131c42;
+  --parchment:#f2ead8;
+  --parchment-dim:#cfc4a8;
+  --gold:#e9c979;
+  --gold-deep:#c9a227;
+  --teal:#57b8a2;
+  --rust:#c96f4a;
+  --card:#101736;
+  --line:#2a3565;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:linear-gradient(180deg,var(--ink) 0%,var(--ink2) 55%,var(--ink) 100%);
+  color:var(--parchment);
+  font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  line-height:1.6;
+  font-size:17px;
+}
+h1,h2,h3,.display{
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--gold);
+  line-height:1.2;
+  margin:0 0 .5rem;
+}
+h1{font-size:2.1rem}
+h2{font-size:1.55rem;margin-top:2.2rem}
+h3{font-size:1.15rem}
+p{margin:.6rem 0}
+a{color:var(--teal)}
+a:hover{color:var(--gold)}
+.wrap{max-width:1060px;margin:0 auto;padding:0 1rem 3rem}
+
+/* header / nav */
+header.site{
+  position:sticky;top:0;z-index:20;
+  background:rgba(7,11,29,.92);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(6px);
+}
+.nav{
+  max-width:1060px;margin:0 auto;padding:.55rem 1rem;
+  display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .9rem;
+}
+.brand{
+  font-family:Georgia,serif;font-size:1.15rem;color:var(--gold);
+  text-decoration:none;margin-right:auto;white-space:nowrap;
+}
+.brand .moon{color:var(--parchment)}
+.nav a.page{
+  color:var(--parchment-dim);text-decoration:none;font-size:.98rem;
+  padding:.25rem .1rem;border-bottom:2px solid transparent;
+}
+.nav a.page:hover{color:var(--gold)}
+.nav a.page[aria-current="page"]{color:var(--gold);border-bottom-color:var(--gold-deep)}
+
+/* hero */
+.hero{
+  text-align:center;
+  padding:3rem 1rem 2.2rem;
+  background:
+    radial-gradient(ellipse 340px 200px at 50% -40px, rgba(233,201,121,.28), transparent 70%),
+    radial-gradient(ellipse 900px 420px at 50% -160px, rgba(87,184,162,.12), transparent 70%);
+}
+.hero .moon-disc{
+  width:92px;height:92px;margin:0 auto 1rem;border-radius:50%;
+  background:radial-gradient(circle at 38% 34%, #fdf6dd, var(--gold) 58%, var(--gold-deep));
+  box-shadow:0 0 55px rgba(233,201,121,.45);
+}
+.hero h1{font-size:2.6rem;margin-bottom:.3rem}
+.hero .tag{color:var(--parchment-dim);font-size:1.08rem;max-width:640px;margin:.4rem auto}
+.badge{
+  display:inline-block;border:1px solid var(--gold-deep);color:var(--gold);
+  border-radius:999px;padding:.12rem .7rem;font-size:.82rem;letter-spacing:.08em;
+  text-transform:uppercase;margin:.3rem .2rem;
+}
+.badge.teal{border-color:var(--teal);color:var(--teal)}
+.badge.rust{border-color:var(--rust);color:var(--rust)}
+
+/* cards & grids */
+.grid{display:grid;grid-template-columns:1fr;gap:1rem;margin:1.2rem 0}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.grid.three{grid-template-columns:1fr 1fr 1fr}}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.1rem 1.15rem;
+}
+.card h3{margin-top:0}
+.card p{color:var(--parchment-dim);font-size:.98rem}
+.card .role{color:var(--gold);font-size:.9rem;letter-spacing:.02em}
+.card a.more{font-size:.95rem}
+
+/* clock + status widgets */
+.widget{
+  background:linear-gradient(180deg,var(--ink3),var(--card));
+  border:1px solid var(--gold-deep);border-radius:var(--radius);
+  padding:1.2rem 1.15rem;margin:1.4rem 0;text-align:center;
+}
+.widget .big{
+  font-family:Georgia,serif;font-size:2rem;color:var(--gold);margin:.2rem 0;
+}
+.widget .row{
+  display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;justify-content:center;
+  color:var(--parchment-dim);font-size:.98rem;
+}
+.widget .row b{color:var(--parchment);font-weight:600}
+.status-dot{display:inline-block;width:.6em;height:.6em;border-radius:50%;background:var(--teal);margin-right:.4em}
+.status-dot.stale{background:var(--rust)}
+.small{font-size:.88rem;color:var(--parchment-dim)}
+.center{text-align:center}
+
+/* phases strip */
+.phases{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin:1rem 0}
+@media(min-width:800px){.phases{grid-template-columns:repeat(4,1fr)}}
+.phase{border-radius:var(--radius);padding:1rem;border:1px solid var(--line);min-height:120px}
+.phase h3{margin:0 0 .3rem;color:var(--parchment)}
+.phase p{font-size:.92rem;color:rgba(242,234,216,.85);margin:0}
+.phase.dawn{background:linear-gradient(160deg,#3a2b4d,#7a4a63 70%,#c97b5a)}
+.phase.day{background:linear-gradient(160deg,#274b73,#3f7ea6 70%,#7fb2c9)}
+.phase.evening{background:linear-gradient(160deg,#402b52,#8a4b3a 65%,#d99a4e)}
+.phase.night{background:linear-gradient(160deg,#05081a,#101736 70%,#1d2a57)}
+
+/* tables & lists */
+table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.97rem}
+th,td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+th{color:var(--gold);font-family:Georgia,serif;font-weight:600}
+ul.tight li{margin:.3rem 0}
+blockquote.locked{
+  border-left:4px solid var(--gold-deep);margin:1.4rem 0;padding:.8rem 1.1rem;
+  background:rgba(233,201,121,.07);font-family:Georgia,serif;font-size:1.15rem;color:var(--parchment);
+}
+.door{
+  display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1rem 1.15rem;margin:.8rem 0;text-decoration:none;color:var(--parchment);
+}
+a.door:hover{border-color:var(--gold-deep)}
+.door .door-name{font-family:Georgia,serif;color:var(--gold);font-size:1.12rem}
+.door .door-state{color:var(--parchment-dim);font-size:.95rem}
+.door .door-url{color:var(--teal);font-size:.9rem;word-break:break-all}
+
+footer.site{
+  border-top:1px solid var(--line);margin-top:3rem;padding:1.4rem 1rem 2.2rem;
+  text-align:center;color:var(--parchment-dim);font-size:.92rem;
+}
+footer.site .notoken{color:var(--gold);font-family:Georgia,serif;font-size:1.02rem}
