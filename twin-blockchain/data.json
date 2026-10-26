@@ -1,0 +1,1045 @@
+{
+ "anchors": [
+  {
+   "hub_block_hash": "a1669730699ccdbb31e469d1473b89631fdf8973ca036c5c6324dc2480c30f9f",
+   "hub_height": 12222,
+   "spoke": "twin-chain-agora",
+   "spoke_height": 2198,
+   "submitter": "0x64061a19fa0f1623c0736ca3efd74507b8aca0bf",
+   "txid": "f9e5cb1755538a02b8775c560935bf9ad0f4f39b39a0109c3ea9749ad39072f7"
+  },
+  {
+   "hub_block_hash": "1a6664d69a9cfda3aab6054cb66d40a4dc7712dbcb126cdd7d04fdd1d34beab4",
+   "hub_height": 12224,
+   "spoke": "twin-chain-keel",
+   "spoke_height": 2212,
+   "submitter": "0x64061a19fa0f1623c0736ca3efd74507b8aca0bf",
+   "txid": "7e08562dcb966671f89a601f86c946346895fd7e42d91f2997366a90fc982ebc"
+  },
+  {
+   "hub_block_hash": "91823335f8e3a8e2158d72d0e896d154440093db2834757163f9b5a1a695b0a4",
+   "hub_height": 12225,
+   "spoke": "twin-chain-tessera",
+   "spoke_height": 1980,
+   "submitter": "0x64061a19fa0f1623c0736ca3efd74507b8aca0bf",
+   "txid": "804120b060bc1714d0e776b3da12d9d47d8175c02c8f03792c201ab741d83101"
+  }
+ ],
+ "chains": {
+  "agora": {
+   "accounts": [
+    {
+     "address": "0xdc5b07d523286435ef58b75adb94b73a55ed7f3d",
+     "balance_units": 100000000.0,
+     "role": "community"
+    },
+    {
+     "address": "0x49524c1f9b17158e120c4d65e519e130d95c98db",
+     "balance_units": 75000000.0,
+     "role": "founders"
+    },
+    {
+     "address": "0x7088643ed62ef46173e4b2a22b7745ef94a25089",
+     "balance_units": 174996085.0,
+     "role": "rewards"
+    },
+    {
+     "address": "0x218e052f808b71f1c96189b7fc6aace31540b2b6",
+     "balance_units": 150000000.0,
+     "role": "treasury"
+    },
+    {
+     "address": "0x5e2b84e7e790034d006053310ceac7165c5bfcf6",
+     "balance_units": 3915.0,
+     "role": "validator"
+    }
+   ],
+   "cap_units": 500000000,
+   "chain": "twin-chain-agora",
+   "coin": "AGORA",
+   "height": 3915,
+   "key": "agora",
+   "name": "AGORA",
+   "posture": "normal",
+   "published_at": 1793023078,
+   "recent_blocks": [
+    {
+     "hash": "427b7d020c5a6c46fa3de0deadcafe4142fa8b4030a4b403f1e91063dba8dc67",
+     "height": 3915,
+     "timestamp": 1793023078,
+     "txs": 1
+    },
+    {
+     "hash": "14a6c1e6588b2b3227b1364231770129f402506d88ebd20a2ae9f1dae476fd54",
+     "height": 3914,
+     "timestamp": 1793023073,
+     "txs": 1
+    },
+    {
+     "hash": "c7c53a82aa30825f6d4734d7aa629ad4fdad9f6595ac14abde63a8c3aeecdf58",
+     "height": 3913,
+     "timestamp": 1793023068,
+     "txs": 1
+    },
+    {
+     "hash": "cc246bb97105463cc7300cb9dd200e13114d67177f1598041ee8e4d4499fb4c4",
+     "height": 3912,
+     "timestamp": 1793023063,
+     "txs": 1
+    },
+    {
+     "hash": "5769b5a7388f6189292733235aea97391fc8583084b045318853695983114604",
+     "height": 3911,
+     "timestamp": 1793023057,
+     "txs": 1
+    },
+    {
+     "hash": "519ddb5381524f877f14bdc099ae3577433dc250fce44eaf6fba2fead82f0b58",
+     "height": 3910,
+     "timestamp": 1793023052,
+     "txs": 1
+    },
+    {
+     "hash": "0c96e7f819e6c08aa1ea06fd897c200ec6c600817645da168fe2193cf9d15fc1",
+     "height": 3909,
+     "timestamp": 1793023047,
+     "txs": 1
+    },
+    {
+     "hash": "01e4dcfdb75447d05807c9a2be1d264ae06f095b26e24d3e65526d050df88b05",
+     "height": 3908,
+     "timestamp": 1793023042,
+     "txs": 1
+    },
+    {
+     "hash": "d733823932f17442dea52b2a56c7da767182baa79b308c67297e06d0635e110f",
+     "height": 3907,
+     "timestamp": 1793023037,
+     "txs": 1
+    },
+    {
+     "hash": "ef84f3279b9e7370e99096ee10052626759bef1c5d861562f8e3abf183414a94",
+     "height": 3906,
+     "timestamp": 1793023032,
+     "txs": 1
+    },
+    {
+     "hash": "4efe6a3b5e289dbc34c9b49b3a7a2112f945a846d616820fc3f96df9ba53aa2b",
+     "height": 3905,
+     "timestamp": 1793023027,
+     "txs": 1
+    },
+    {
+     "hash": "535a464e644dc1aeed86bc0b21d2cbde101ff967574eae4629a46794b77e5af8",
+     "height": 3904,
+     "timestamp": 1793023022,
+     "txs": 1
+    },
+    {
+     "hash": "419254811473aea5c783e42745c83d7dcf1abbe22515b3d2eaf00a17b85c9bff",
+     "height": 3903,
+     "timestamp": 1793023017,
+     "txs": 1
+    },
+    {
+     "hash": "c038b8c21d9782c1bdcd128b13130d7aac58e606cb521dab576167daeed06310",
+     "height": 3902,
+     "timestamp": 1793023012,
+     "txs": 1
+    },
+    {
+     "hash": "a7717bb23717b595a18f578526a2aa6779d2113c2d18d96bd14b0ccd14af3acd",
+     "height": 3901,
+     "timestamp": 1793023007,
+     "txs": 1
+    },
+    {
+     "hash": "e9088dc9a80577e9a20096fb4be60d3e30cfe5e3f0e4211dbf2285e04d84e725",
+     "height": 3900,
+     "timestamp": 1793023002,
+     "txs": 1
+    },
+    {
+     "hash": "e8b734149ddb81f3b1bd0baa7befa4f405d0e91f0637359f5893bf68e1c0adab",
+     "height": 3899,
+     "timestamp": 1793022997,
+     "txs": 1
+    },
+    {
+     "hash": "70c7e75faa4a97bbce1606312c4d76f3b734feb73dd217b4043c7ae00a9f697a",
+     "height": 3898,
+     "timestamp": 1793022992,
+     "txs": 1
+    },
+    {
+     "hash": "13429023434ff68932f81f6bb1928e9d477a2209b36f187374ad7189c12d0b44",
+     "height": 3897,
+     "timestamp": 1793022986,
+     "txs": 1
+    },
+    {
+     "hash": "4c5eaf1c82188dd2fb2df20d7880f33565defbdba6990bbcee560081aef8371f",
+     "height": 3896,
+     "timestamp": 1793022980,
+     "txs": 1
+    },
+    {
+     "hash": "aed37bdeb99076d0ddfdba7afcd3848fd53bf8f65acca383d19e1017660fd658",
+     "height": 3895,
+     "timestamp": 1793022975,
+     "txs": 1
+    },
+    {
+     "hash": "13b9c9ffb0553fc541c3197594986e54c8ec0ab7aab5ca674167886567352ad5",
+     "height": 3894,
+     "timestamp": 1793022970,
+     "txs": 1
+    },
+    {
+     "hash": "d1c05acb1bf39e318c6dd5fa2f1adc84a3c4f6737eec2ccbc78d13a5198d6bdf",
+     "height": 3893,
+     "timestamp": 1793022965,
+     "txs": 1
+    },
+    {
+     "hash": "4c1d77b17b88ab07550c52f89ab36752ae53f7e26b18d375b71b8a9ee768be9a",
+     "height": 3892,
+     "timestamp": 1793022960,
+     "txs": 1
+    },
+    {
+     "hash": "b712142af2c42018e8cc8697da2f49b8ceb1b78de52f825b0174c38fec063b0f",
+     "height": 3891,
+     "timestamp": 1793022955,
+     "txs": 1
+    }
+   ],
+   "state": "published",
+   "state_root": "96f381e66a239e5956db41c878e98b0ae39494e235b627df6d85b7426df350b8",
+   "status_feed": "live",
+   "supply_units": 500000000.0,
+   "tip_hash": "427b7d020c5a6c46fa3de0deadcafe4142fa8b4030a4b403f1e91063dba8dc67",
+   "tip_timestamp": 1793023073
+  },
+  "hub": {
+   "accounts": [],
+   "cap_units": null,
+   "chain": "twin-chain-twopi-designed",
+   "coin": null,
+   "height": 2908,
+   "key": "hub",
+   "name": "The Family Hub",
+   "posture": "normal",
+   "published_at": 1793023080,
+   "recent_blocks": [
+    {
+     "hash": "8492b8c47d310f91ad84dd0059fc88e7aef539db9f8a1e11f17194b1cd4a169e",
+     "height": 2908,
+     "timestamp": 1793023079,
+     "txs": 1
+    },
+    {
+     "hash": "9f97242fa502e2a47caff61e56a184cf118e026e65f158abf6e79dec199a2087",
+     "height": 2907,
+     "timestamp": 1793023074,
+     "txs": 1
+    },
+    {
+     "hash": "155de21f22f2362890367620335a63acd3cd8129d57267e0f6a820db831a752e",
+     "height": 2906,
+     "timestamp": 1793023069,
+     "txs": 1
+    },
+    {
+     "hash": "3e91c32e735f9cfdb404119ee0442e93630f6ef0ff75a0ddb5473de7558dd968",
+     "height": 2905,
+     "timestamp": 1793023064,
+     "txs": 1
+    },
+    {
+     "hash": "135262b0a56607877af352f68580ffb12603ba60ee7721a623833bb5691f1432",
+     "height": 2904,
+     "timestamp": 1793023059,
+     "txs": 1
+    },
+    {
+     "hash": "18f19490297c992905a8cf71c9a78c89547cd2d8d536edf1cb763856db64f301",
+     "height": 2903,
+     "timestamp": 1793023054,
+     "txs": 1
+    },
+    {
+     "hash": "daf06914f97429a3d9425cefe85c779f525094304bc450e7d92a4e6b1e4eeb2c",
+     "height": 2902,
+     "timestamp": 1793023049,
+     "txs": 1
+    },
+    {
+     "hash": "0a2eb91b3e8277354ca10eb34efa2d6783216aabc1f7bc35772da7e0012a9194",
+     "height": 2901,
+     "timestamp": 1793023044,
+     "txs": 1
+    },
+    {
+     "hash": "fa4079631eb43a9c193e43e76f80350443eec71c38eb9e9ff184e1c62945910c",
+     "height": 2900,
+     "timestamp": 1793023039,
+     "txs": 1
+    },
+    {
+     "hash": "13911896b951cb120d305d6e57400dfc2fb6c1309036f337acfc9ab9630ef222",
+     "height": 2899,
+     "timestamp": 1793023033,
+     "txs": 1
+    },
+    {
+     "hash": "275168ab3d566b1a77eb3d6ebb01bc84efeb1150c078df120f4ca322367f0fcf",
+     "height": 2898,
+     "timestamp": 1793023028,
+     "txs": 1
+    },
+    {
+     "hash": "bc925232eb338939e8d638edd3be589d54b4fdcfbda79ee3903cc42dcd280971",
+     "height": 2897,
+     "timestamp": 1793023022,
+     "txs": 1
+    },
+    {
+     "hash": "55947d3a2cdd3766b6a98adf700af8e79e5424a13ef42dcde7acec4587511828",
+     "height": 2896,
+     "timestamp": 1793023017,
+     "txs": 1
+    },
+    {
+     "hash": "832e9693812fdd0b1a9fa14637c82cbd92e614046ae3cd79dd708617c47fc2ec",
+     "height": 2895,
+     "timestamp": 1793023012,
+     "txs": 1
+    },
+    {
+     "hash": "b906ea68762b822ae1f72dec1cb7bfea9e2afc04bc94d1f1e69d2fe1c5e18595",
+     "height": 2894,
+     "timestamp": 1793023007,
+     "txs": 1
+    },
+    {
+     "hash": "eb5ae9cefe537211930b716ed6cc79b87483c16fd179c9e0346d2e5e3edc7f9f",
+     "height": 2893,
+     "timestamp": 1793023002,
+     "txs": 1
+    },
+    {
+     "hash": "977ea0decb5270d90ff04b1b530ba5584e8fbdc64e395c9f7002791eb96171b8",
+     "height": 2892,
+     "timestamp": 1793022997,
+     "txs": 1
+    },
+    {
+     "hash": "397bca8b370774f1ad3347347aa3cef88cb58cf8443247574b24a7626d9333d7",
+     "height": 2891,
+     "timestamp": 1793022992,
+     "txs": 1
+    },
+    {
+     "hash": "7cdfe0e665dbb39fe252e8dc315d569bc346cd4ca8668f0a55a0c7670e8b528b",
+     "height": 2890,
+     "timestamp": 1793022986,
+     "txs": 1
+    },
+    {
+     "hash": "9324dc4d590b7e7c0bc8dd0e4b461ed51fdaec980fd7f335b8092631d05696ba",
+     "height": 2889,
+     "timestamp": 1793022981,
+     "txs": 1
+    },
+    {
+     "hash": "f815f317025b0c6aeb9aa129c68de91dbf9b684cf0ea7d9c44102e03f46f2a90",
+     "height": 2888,
+     "timestamp": 1793022976,
+     "txs": 1
+    },
+    {
+     "hash": "7d18a01b57361b8d4fdcff22212f2908b983f971b9be2716a4d683900b1785ca",
+     "height": 2887,
+     "timestamp": 1793022971,
+     "txs": 1
+    },
+    {
+     "hash": "725b7f936ec5d7c50870bbdec459371dfcde3cd99e0a1f6adada88b68d25c00e",
+     "height": 2886,
+     "timestamp": 1793022966,
+     "txs": 1
+    },
+    {
+     "hash": "598afb3afc4c6c3f371a0596e9e384ed4c97656ad7cdcbf5b0c67fc22b583d82",
+     "height": 2885,
+     "timestamp": 1793022960,
+     "txs": 1
+    },
+    {
+     "hash": "b3b6919ae7d5b5a9c644972949a31412b225386ad62bf0f8e6a101ce310fd22f",
+     "height": 2884,
+     "timestamp": 1793022954,
+     "txs": 1
+    }
+   ],
+   "spoke_anchors": [
+    {
+     "entries": [
+      {
+       "game_last_anchor_tick": -1,
+       "game_state_hash": "",
+       "records": {
+        "anchor": 0,
+        "ownership": 0,
+        "settlement_intent": 0
+       },
+       "spoke": "twin-chain-agora",
+       "spoke_height": 16,
+       "spoke_state_root": "b10d3fa3180f970fc9988df045dfab681995a5ca2a50cc34b911e9a220fed0a4",
+       "spoke_tip_hash": "efd568488129d84109249930a9d49a4bfa0db0c4735e67056c3364a626632b37",
+       "submitter": "0x2b020a84b085ba862c15fd7a56d4d28bb6f1262c"
+      }
+     ],
+     "spoke": "twin-chain-agora"
+    },
+    {
+     "entries": [
+      {
+       "game_last_anchor_tick": -1,
+       "game_state_hash": "",
+       "records": {
+        "anchor": 0,
+        "ownership": 0,
+        "settlement_intent": 0
+       },
+       "spoke": "twin-chain-keel",
+       "spoke_height": 31,
+       "spoke_state_root": "0514b94c424d86c55cead581c86070441cb1f47fa84cb6e020885fc949820883",
+       "spoke_tip_hash": "fd1d12572a7ca93f55a1add0f83edd892ab19791d62bfabe66f905e76c2fef1f",
+       "submitter": "0x2b020a84b085ba862c15fd7a56d4d28bb6f1262c"
+      }
+     ],
+     "spoke": "twin-chain-keel"
+    },
+    {
+     "entries": [
+      {
+       "game_last_anchor_tick": -1,
+       "game_state_hash": "",
+       "records": {
+        "anchor": 0,
+        "ownership": 0,
+        "settlement_intent": 0
+       },
+       "spoke": "twin-chain-tessera",
+       "spoke_height": 26,
+       "spoke_state_root": "1de828aa6606d3e65b921fafa7d895e5ea4716d9b7beb37cf3cf5ab4e8e49a71",
+       "spoke_tip_hash": "613a360b08be0ba7c23dc4c67b48e06b0de534385a7acb818e1e9062e0025b80",
+       "submitter": "0x2b020a84b085ba862c15fd7a56d4d28bb6f1262c"
+      }
+     ],
+     "spoke": "twin-chain-tessera"
+    }
+   ],
+   "state": "published",
+   "state_root": "c137cda3f38c8382b45e401c9d703020f0f2d9d1972ba76d3c3333680029bb9d",
+   "status_feed": "live",
+   "supply_units": null,
+   "tip_hash": "8492b8c47d310f91ad84dd0059fc88e7aef539db9f8a1e11f17194b1cd4a169e",
+   "tip_timestamp": 1793023074
+  },
+  "keel": {
+   "accounts": [
+    {
+     "address": "0xedb4c34ffe06e66b1244eeb92c56c1d7ddcd632c",
+     "balance_units": 30000000.0,
+     "role": "builders"
+    },
+    {
+     "address": "0x6a35ba0aa4974bc353e217fa15360d6b7887c3f1",
+     "balance_units": 15000000.0,
+     "role": "founders"
+    },
+    {
+     "address": "0x40848061aba9ca28044c8a6bbdc8c6b49439f5cc",
+     "balance_units": 15000000.0,
+     "role": "reserve"
+    },
+    {
+     "address": "0x135bdaf859ce2786607558a5714e090f180517a9",
+     "balance_units": 40000000.0,
+     "role": "stewards"
+    },
+    {
+     "address": "0xa259f0eab850a26ed40585372ab7b69fe03554da",
+     "balance_units": 0.0,
+     "role": "validator"
+    }
+   ],
+   "cap_units": 100000000,
+   "chain": "twin-chain-keel",
+   "coin": "KEEL",
+   "height": 3941,
+   "key": "keel",
+   "name": "KEEL",
+   "posture": "normal",
+   "published_at": 1793023082,
+   "recent_blocks": [
+    {
+     "hash": "37421f778f832c1a18c3956ffd2fab243a4d59e3fe65fa66b347392da3064789",
+     "height": 3941,
+     "timestamp": 1793023081,
+     "txs": 1
+    },
+    {
+     "hash": "ca5bcb785d9dee81bbdd10e20670e3630c92e5241dd7667994bca02b50321c5f",
+     "height": 3940,
+     "timestamp": 1793023076,
+     "txs": 1
+    },
+    {
+     "hash": "eb6160b98a160f457a39177ef96e1045487e3d347a2ab08c7695b10612616972",
+     "height": 3939,
+     "timestamp": 1793023071,
+     "txs": 1
+    },
+    {
+     "hash": "84b70dc69681d81bcb521c3c182f00ef780575f82899caccf3d98dada75291a1",
+     "height": 3938,
+     "timestamp": 1793023065,
+     "txs": 1
+    },
+    {
+     "hash": "1e73d7c286c16dc465e3c41369f161afa460bd2de0a9eb48095c396fbb0504b0",
+     "height": 3937,
+     "timestamp": 1793023060,
+     "txs": 1
+    },
+    {
+     "hash": "26d6173886abf7ef97a43d5e403770720520ac1294d467b44949eed01dda0ea4",
+     "height": 3936,
+     "timestamp": 1793023055,
+     "txs": 1
+    },
+    {
+     "hash": "72fb75f4749742995a8abc5732391662a587217428c7520cfa87d58a1627f5dd",
+     "height": 3935,
+     "timestamp": 1793023050,
+     "txs": 1
+    },
+    {
+     "hash": "41eeb75eefdd9d6a50facb68325c17bd31ec042da99823bba9d9cc03bba77cd8",
+     "height": 3934,
+     "timestamp": 1793023045,
+     "txs": 1
+    },
+    {
+     "hash": "506cc3fa3807c1612fb8283575b897edf5d85f4478af1a2ffd7136cb3e74f35b",
+     "height": 3933,
+     "timestamp": 1793023040,
+     "txs": 1
+    },
+    {
+     "hash": "db9979b1d4c8d63df380771651afd4a5ac3072ba4cfac5fb9420338ed06b3f12",
+     "height": 3932,
+     "timestamp": 1793023034,
+     "txs": 1
+    },
+    {
+     "hash": "3ac8a1038c002c84d43018e892c0d77a009f67db19b88cf7e284e1ce02230f5a",
+     "height": 3931,
+     "timestamp": 1793023029,
+     "txs": 1
+    },
+    {
+     "hash": "54ba09ac1955faeb6029566e2782a206a394feabc6c3079298efdd98c9f267eb",
+     "height": 3930,
+     "timestamp": 1793023024,
+     "txs": 1
+    },
+    {
+     "hash": "18737acd1e7bc1d14795adc2a3bf8c8d02dcbdacc5f7cab087b3d2e79dcf11eb",
+     "height": 3929,
+     "timestamp": 1793023019,
+     "txs": 1
+    },
+    {
+     "hash": "4e02a356b1173f4f9d057957bba8a8f1e17aaf48d7f07e4fd7b06831a1d29009",
+     "height": 3928,
+     "timestamp": 1793023014,
+     "txs": 1
+    },
+    {
+     "hash": "f31c1674fa6c1a7b88359de573753f2446d22128e3cbb9030b5bae553dba0df5",
+     "height": 3927,
+     "timestamp": 1793023009,
+     "txs": 1
+    },
+    {
+     "hash": "dfdea00376db8b3567d8f6640e94383f78086ea9e2da13cf1dbfec19716320d2",
+     "height": 3926,
+     "timestamp": 1793023004,
+     "txs": 1
+    },
+    {
+     "hash": "610f39ac0b4f5d723b56627c686df88070d5229e2bf8c995ccb0e622cad0ff74",
+     "height": 3925,
+     "timestamp": 1793022999,
+     "txs": 1
+    },
+    {
+     "hash": "79b88ec9fe5f5d3c12be9f76f391d2460c68058c5f6e6e16d09e505e1b0104ab",
+     "height": 3924,
+     "timestamp": 1793022994,
+     "txs": 1
+    },
+    {
+     "hash": "07c67869ec96f37179245a0cda3978ee2f89b1335f82072b8422d713d56d13fc",
+     "height": 3923,
+     "timestamp": 1793022989,
+     "txs": 1
+    },
+    {
+     "hash": "067ce835f1b777c7eaee1a26e599f1b1bc58836c4bb6268ccbfccc28681a22f3",
+     "height": 3922,
+     "timestamp": 1793022983,
+     "txs": 1
+    },
+    {
+     "hash": "926f4f25601dc7660e53524cc7501899f3622410cc087c01fecda828b9ebbd09",
+     "height": 3921,
+     "timestamp": 1793022978,
+     "txs": 1
+    },
+    {
+     "hash": "6eb4953e07e6b0e74ec526ef0ad9cba0c69ba843b8554b5108f08c92e216f22b",
+     "height": 3920,
+     "timestamp": 1793022973,
+     "txs": 1
+    },
+    {
+     "hash": "de5c4ba00c1d25b6f55bc19540d04ead5eb3469710461b6e1b351f92f0b579cd",
+     "height": 3919,
+     "timestamp": 1793022968,
+     "txs": 1
+    },
+    {
+     "hash": "a0d6ba9b8ae1dbcaad0d1359754599626adc19d5d659f5b34386a237383a4081",
+     "height": 3918,
+     "timestamp": 1793022963,
+     "txs": 1
+    },
+    {
+     "hash": "cde8bd768ac5fcf7249872496d2243dd3b041bbc91b04dc30f8c09f88dd9be76",
+     "height": 3917,
+     "timestamp": 1793022958,
+     "txs": 1
+    }
+   ],
+   "state": "published",
+   "state_root": "0514b94c424d86c55cead581c86070441cb1f47fa84cb6e020885fc949820883",
+   "status_feed": "live",
+   "supply_units": 100000000.0,
+   "tip_hash": "37421f778f832c1a18c3956ffd2fab243a4d59e3fe65fa66b347392da3064789",
+   "tip_timestamp": 1793023071
+  },
+  "tessera": {
+   "accounts": [
+    {
+     "address": "0x232f920189bb076753a91f3d9dc4738c6b80590a",
+     "balance_units": 15000000.0,
+     "role": "future"
+    },
+    {
+     "address": "0x3cf76b4272cdc361727d528f6fa229abdb6804d0",
+     "balance_units": 20000000.0,
+     "role": "governance"
+    },
+    {
+     "address": "0xb20c88d49797ced19cece1a4ae3463e290b720b8",
+     "balance_units": 40000000.0,
+     "role": "reserve"
+    },
+    {
+     "address": "0x432e883b0af32a40ba253b727734803a005ed395",
+     "balance_units": 24999621.7,
+     "role": "settlement"
+    },
+    {
+     "address": "0xad97ad50ea31b637f118c534b50db0ae9917bc95",
+     "balance_units": 378.3,
+     "role": "validator"
+    }
+   ],
+   "cap_units": 100000000,
+   "chain": "twin-chain-tessera",
+   "coin": "TESS",
+   "height": 3783,
+   "key": "tessera",
+   "name": "TESSERA",
+   "posture": "normal",
+   "published_at": 1793023081,
+   "recent_blocks": [
+    {
+     "hash": "436c8acacc9930a1a83571aaed29028d51db0f13c41c9b5dfdc24a4d1e502a4e",
+     "height": 3783,
+     "timestamp": 1793023080,
+     "txs": 1
+    },
+    {
+     "hash": "a5908661e05b5884c8e1bceaeaedead7f42cdde21683dd83409d29db0f948f6c",
+     "height": 3782,
+     "timestamp": 1793023075,
+     "txs": 1
+    },
+    {
+     "hash": "b057621afc19e95c71c9b37255ca267bdd5d186221927e526943da38d95a962e",
+     "height": 3781,
+     "timestamp": 1793023070,
+     "txs": 1
+    },
+    {
+     "hash": "22bc5a5ddd84e6f8f90e8e619ddbbd8f7f030820df1b55d4befc77c406b77e0e",
+     "height": 3780,
+     "timestamp": 1793023065,
+     "txs": 1
+    },
+    {
+     "hash": "5f0dd6594fb137034d7c3e8ae1beb7f5ed97bfae97aae0e60d67988029357eb5",
+     "height": 3779,
+     "timestamp": 1793023059,
+     "txs": 1
+    },
+    {
+     "hash": "b1a3ea0c5a38c34fc0b55838418c0b4fa95cbbe4ed05df0d564d7574a483fe40",
+     "height": 3778,
+     "timestamp": 1793023053,
+     "txs": 1
+    },
+    {
+     "hash": "cd0d411a0ae2d5e0d15858d5598bcd081294247dc2a0ba7c5371bce3fb280597",
+     "height": 3777,
+     "timestamp": 1793023048,
+     "txs": 1
+    },
+    {
+     "hash": "75ecfd3bd72d4cdf0b21d875acf255ef161a56d7e69da6040506d26b4cc7e5d8",
+     "height": 3776,
+     "timestamp": 1793023043,
+     "txs": 1
+    },
+    {
+     "hash": "72a56a9710dd0764681663856c16d67d4f0276b36e09a9c1dbf055be96b59794",
+     "height": 3775,
+     "timestamp": 1793023038,
+     "txs": 1
+    },
+    {
+     "hash": "418f3cd8fc299263b4384f5a36e1e15a3e6cc9d15b5f648fd69ea10575fda761",
+     "height": 3774,
+     "timestamp": 1793023033,
+     "txs": 1
+    },
+    {
+     "hash": "7374335482213e36f6cf338716249d2c646625c6495235776ced184a0e57b51a",
+     "height": 3773,
+     "timestamp": 1793023028,
+     "txs": 1
+    },
+    {
+     "hash": "9fa9fa0b7b8b2e974005941a0208916ea8844875d711b1f5e20402d2f9a39141",
+     "height": 3772,
+     "timestamp": 1793023023,
+     "txs": 1
+    },
+    {
+     "hash": "07ed641777b1023580d1eeacc561d695fdb854606dfa5ec235f9e4cdb84324a3",
+     "height": 3771,
+     "timestamp": 1793023018,
+     "txs": 1
+    },
+    {
+     "hash": "44941167d3e5570b191d46b5b81a3619124249c5819f5cd0bc5135d3b37526c4",
+     "height": 3770,
+     "timestamp": 1793023013,
+     "txs": 1
+    },
+    {
+     "hash": "3ca508a7b560098dffc92320fef782c7b0fc50f59ffada4b2f48b4d82a355a0c",
+     "height": 3769,
+     "timestamp": 1793023008,
+     "txs": 1
+    },
+    {
+     "hash": "755648b6c3c351ab48e2650ed305e7ab264ca830f02f0dd37003540b9de2b3af",
+     "height": 3768,
+     "timestamp": 1793023003,
+     "txs": 1
+    },
+    {
+     "hash": "01d9cbc3e01d22f6b8761b4c5d026bc2c1ab33b106434336c3dcaaf1df3459df",
+     "height": 3767,
+     "timestamp": 1793022998,
+     "txs": 1
+    },
+    {
+     "hash": "8de03f71594d39337d14c69f1d1d68c70c281374e95e4860c2576e8572f47861",
+     "height": 3766,
+     "timestamp": 1793022993,
+     "txs": 1
+    },
+    {
+     "hash": "f8396f03dfc628a43413a5fabc668f0160440ef85bb02eca23f1a01ea8cd7f6f",
+     "height": 3765,
+     "timestamp": 1793022988,
+     "txs": 1
+    },
+    {
+     "hash": "a62701219a310c656710a5e1c7e63561071015bc511b3dc489d57785f9967772",
+     "height": 3764,
+     "timestamp": 1793022982,
+     "txs": 1
+    },
+    {
+     "hash": "1392f780012f5c6e924533d8ee77d970060b9e0ad12eee267646a624c374592b",
+     "height": 3763,
+     "timestamp": 1793022976,
+     "txs": 1
+    },
+    {
+     "hash": "4ea6eea3663e6d9a3fb0ca8fe278d610d5611bf4bb4a414bc67b656a7ca13475",
+     "height": 3762,
+     "timestamp": 1793022971,
+     "txs": 1
+    },
+    {
+     "hash": "ac337d528332accbbaa4b4d26dc3e0fa74ee6926ec0e8d0ed8f2e5c47be50154",
+     "height": 3761,
+     "timestamp": 1793022966,
+     "txs": 1
+    },
+    {
+     "hash": "e0e77f4e1303325b1032402e7b1db24799a7a4f5b0a4eb16d6f13a01535e42b8",
+     "height": 3760,
+     "timestamp": 1793022961,
+     "txs": 1
+    },
+    {
+     "hash": "be51a19541e1a18204c5a836484a88b825354779d1a2dc2e359fceb442ca05c6",
+     "height": 3759,
+     "timestamp": 1793022956,
+     "txs": 1
+    }
+   ],
+   "state": "published",
+   "state_root": "8dd1fa5d78e3429be85f35a5bda390c811a9ee76dfa45b7d7287502acccfad55",
+   "status_feed": "live",
+   "supply_units": 100000000.0,
+   "tip_hash": "436c8acacc9930a1a83571aaed29028d51db0f13c41c9b5dfdc24a4d1e502a4e",
+   "tip_timestamp": 1793023070
+  },
+  "twopi": {
+   "accounts": [
+    {
+     "address": "0xabc577dfd5ad660d6d6073803d1f41e5d546db84",
+     "balance_units": 150000000.0,
+     "role": "builders"
+    },
+    {
+     "address": "0x74586d0949d159ce19ead4e7498c54690f04a78b",
+     "balance_units": 400000000.0,
+     "role": "ecosystem"
+    },
+    {
+     "address": "0xd7004c4438e5754186ba1e9935cfa3a5d4e2b493",
+     "balance_units": 150000000.0,
+     "role": "founders"
+    },
+    {
+     "address": "0xe925aca139bb1b70c5901a596c39fbd5b7a261dc",
+     "balance_units": 299974554.0,
+     "role": "network"
+    },
+    {
+     "address": "0x64061a19fa0f1623c0736ca3efd74507b8aca0bf",
+     "balance_units": 25445.999997,
+     "role": "validator"
+    }
+   ],
+   "cap_units": 1000000000,
+   "chain": "twin-chain-twopi",
+   "coin": "TWOPI",
+   "height": 12723,
+   "key": "twopi",
+   "name": "TWOPI",
+   "posture": null,
+   "published_at": 1793017201,
+   "recent_blocks": [
+    {
+     "hash": "e56c96a19b6eecd92ae87262be46490a07de21da8eed09f613642db441dd9ebe",
+     "height": 12723,
+     "timestamp": 1793017200,
+     "txs": 1
+    },
+    {
+     "hash": "7377bfc99b20a97a7ca24eed0ed9297223e35442318a93051df2aaeaa0f3d687",
+     "height": 12722,
+     "timestamp": 1793017195,
+     "txs": 1
+    },
+    {
+     "hash": "4a40233a9366417db980afde755534824d8e2f18f0ccaf019732e008e78c2f7c",
+     "height": 12721,
+     "timestamp": 1793017190,
+     "txs": 1
+    },
+    {
+     "hash": "39309646a4162f3866d96d4b82a901fdf7603b42455fdfd669da18170c6d0e74",
+     "height": 12720,
+     "timestamp": 1793017184,
+     "txs": 1
+    },
+    {
+     "hash": "7597eb3aaa74ad5dac42b7854ac310b5ef204a063d5d6ee631d9f9034088f19d",
+     "height": 12719,
+     "timestamp": 1793017179,
+     "txs": 1
+    },
+    {
+     "hash": "6fcf0720f552f42f114578b894a0fe7cbe08fbf0d2d26eab4b0b17adfe5004fc",
+     "height": 12718,
+     "timestamp": 1793017174,
+     "txs": 1
+    },
+    {
+     "hash": "748f1cd1273a2e87337d40d11d1ce7adcb62a99383872ef34405a8e427272866",
+     "height": 12717,
+     "timestamp": 1793017168,
+     "txs": 1
+    },
+    {
+     "hash": "762a24040020b4835e09e7a1d1f5a4a54213d6e142e553de67f76bd9224e3bdc",
+     "height": 12716,
+     "timestamp": 1793017163,
+     "txs": 1
+    },
+    {
+     "hash": "022c156065e8c8f771a3de3499ae84e6974e5fe6f16a839bd1c57b936fccaf02",
+     "height": 12715,
+     "timestamp": 1793017157,
+     "txs": 1
+    },
+    {
+     "hash": "1a8ffe5f77e7a2797234e75a51338aee048a5a65dfcc2d1239eac9223e0cd153",
+     "height": 12714,
+     "timestamp": 1793017152,
+     "txs": 1
+    },
+    {
+     "hash": "2b2806c084db3d8f7d20df18826ced930e866b0722d3d7e9805bb4e0d48fa38f",
+     "height": 12713,
+     "timestamp": 1793017147,
+     "txs": 1
+    },
+    {
+     "hash": "e9dc44e475d14e69d815b60d03a0e3a827ba4ee2e426b3fb22a5f3ebb5caa217",
+     "height": 12712,
+     "timestamp": 1793017141,
+     "txs": 1
+    },
+    {
+     "hash": "d2b6903842f78b39b93883dd21d70c767cf4a96d727b16d1384083dba1e825f6",
+     "height": 12711,
+     "timestamp": 1793017136,
+     "txs": 1
+    },
+    {
+     "hash": "1ebf307d672feccdd0e8b5d6f854cdc57d7d0d00b177212618639fa12ecabcae",
+     "height": 12710,
+     "timestamp": 1793017130,
+     "txs": 1
+    },
+    {
+     "hash": "4b6080e7c09be01747ef156bafdf715cf0dd25fbd98ae3aa959fb1ee1afe1985",
+     "height": 12709,
+     "timestamp": 1793017124,
+     "txs": 1
+    },
+    {
+     "hash": "a219808a1542d5ba1d7fc0cd31672687d9a82306651baff8647a264ed40d78f7",
+     "height": 12708,
+     "timestamp": 1793017118,
+     "txs": 1
+    },
+    {
+     "hash": "6c77108d3f06bf2b32a00debc6e87c9c2c6ca9430604cfad367f3d90029e7bd0",
+     "height": 12707,
+     "timestamp": 1793017113,
+     "txs": 1
+    },
+    {
+     "hash": "a9b993a96e0a14da8f481152d4871f38fe1fd055da53ddfbe1af6b9627e0e091",
+     "height": 12706,
+     "timestamp": 1793017108,
+     "txs": 1
+    },
+    {
+     "hash": "677dedf889629474a075409a6489412d10ba56bc41dd74b28f75882f9be5d3b3",
+     "height": 12705,
+     "timestamp": 1793017103,
+     "txs": 1
+    },
+    {
+     "hash": "2ff1f71de2552f780e00ac107bd654fc74fc0f28be1ebcc7a1c8079f2b8de3fc",
+     "height": 12704,
+     "timestamp": 1793017097,
+     "txs": 1
+    },
+    {
+     "hash": "8795da500b53cade19191ef1d02484b556427ffe3d86bf40d266ceb0aab67826",
+     "height": 12703,
+     "timestamp": 1793017092,
+     "txs": 1
+    },
+    {
+     "hash": "1de93c212da478dabdd01846e292c1f30f44aa1ed12afb1d67600b71a875ccaf",
+     "height": 12702,
+     "timestamp": 1793017087,
+     "txs": 1
+    },
+    {
+     "hash": "f0741e79c3f04052c6d9d3b643482d4de6e060dd215bd8177477075b464bf004",
+     "height": 12701,
+     "timestamp": 1793017081,
+     "txs": 1
+    },
+    {
+     "hash": "368485ddf3d39bacab2f33e4e98db65e7559f389c9d13d2eee16cb26d4254058",
+     "height": 12700,
+     "timestamp": 1793017075,
+     "txs": 1
+    },
+    {
+     "hash": "645fae33068ef03f7294b1f8a71ede85030eeca8a4a5a9e2ccf2416ec56e5d99",
+     "height": 12699,
+     "timestamp": 1793017070,
+     "txs": 1
+    }
+   ],
+   "state": "published",
+   "state_root": "b9613016ae0bcfcfd5173696977c4bb6cee3bdb811b1a5a8b6bab0c3747cfed5",
+   "status_error": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "status_feed": "error",
+   "supply_units": 999999999.999997,
+   "tip_hash": "e56c96a19b6eecd92ae87262be46490a07de21da8eed09f613642db441dd9ebe",
+   "tip_timestamp": 1793017200
+  }
+ },
+ "combination": {
+  "proof": "COMBINATION-PROOF-2026-10-25 (house record)",
+  "state": "COMBINED"
+ },
+ "generated_at": 1793026122,
+ "generator": "twin-blockchain-site publish_snapshot.py"
+}
