@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explorer — Twin Blockchain</title>
+<meta name="description" content="Browse and search every block on the Twin Blockchain family: TWOPI, KEEL, AGORA, TESSERA and the hub.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="explorer">
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html"><span class="moon">🌙</span> Twin Blockchain</a>
+  <nav class="main" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="twopi.html">Coins</a>
+    <a href="explorer.html" aria-current="page">Explorer</a>
+    <a href="about.html">About</a>
+  </nav>
+</div></header>
+<main><div class="wrap">
+  <h1>Block explorer</h1>
+  <p class="lede">Every block the family has ever produced is in the
+  published record. Pick a chain to see its newest blocks, or search any
+  chain by a block's number or its fingerprint (hash).</p>
+
+  <div id="freshness" class="notice">Loading the latest published data…</div>
+
+  <form class="search" id="search-form">
+    <label class="small" for="search-input">Search all chains by block number or hash</label>
+    <input id="search-input" name="q" type="text" inputmode="search"
+      placeholder="e.g. 3941 or 37421f778f…" autocomplete="off">
+    <button class="btn" type="submit">Search</button>
+  </form>
+  <div id="search-result" aria-live="polite"></div>
+
+  <h2>Newest blocks</h2>
+  <div class="tabs" role="group" aria-label="Choose a chain">
+    <button type="button" data-chain="twopi" aria-pressed="true">TWOPI</button>
+    <button type="button" data-chain="keel" aria-pressed="false">KEEL</button>
+    <button type="button" data-chain="agora" aria-pressed="false">AGORA</button>
+    <button type="button" data-chain="tessera" aria-pressed="false">TESSERA</button>
+    <button type="button" data-chain="hub" aria-pressed="false">Hub</button>
+  </div>
+  <div class="card">
+    <table><thead><tr><th>Block</th><th>Time</th><th>Hash</th><th>Transactions</th></tr></thead>
+    <tbody id="explorer-blocks"><tr><td colspan="4">Loading…</td></tr></tbody></table>
+    <p class="small" id="explorer-note"></p>
+  </div>
+
+  <div class="notice"><strong>What am I looking at?</strong> A block is
+  one sealed page of a chain's ledger. Its <em>hash</em> is a fingerprint
+  made from everything in the page — change one letter anywhere in the
+  block and the fingerprint no longer matches. That is how anyone can
+  check the family's history for themselves.</div>
+</div></main>
+<footer class="site"><div class="wrap">
+  <p>Twin Blockchain — kept by Mira Moon Sweeney. Data published about
+  every five minutes from the chains' own records.</p>
+  <p><a href="index.html">Home</a> · <a href="twopi.html">Coins</a> ·
+     <a href="about.html">About &amp; contact</a></p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

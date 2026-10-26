@@ -1,0 +1,71 @@
+/* Twin Blockchain — public site. Dark, moonlit, plain and readable.
+   Mobile first: one column, big tap targets, nothing buried. */
+:root{
+  --bg:#0b1020; --bg2:#111830; --card:#151d38; --line:#26315a;
+  --ink:#eef1ff; --dim:#a7b0d4; --faint:#7884ab;
+  --teal:#57d9c5; --gold:#e8c476; --violet:#a78bfa; --coral:#fb9a7a;
+  --good:#5fd97a; --warn:#e8c476; --bad:#f28b82;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:linear-gradient(180deg,#0b1020 0%,#0d1330 55%,#0b1020 100%);
+  color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--teal)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header.site{position:sticky;top:0;z-index:5;background:rgba(11,16,32,.92);
+  border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;padding-top:10px;padding-bottom:10px}
+.brand{font-weight:700;font-size:1.15rem;color:var(--ink);text-decoration:none}
+.brand .moon{color:var(--gold)}
+nav.main{display:flex;flex-wrap:wrap;gap:4px 14px;margin-left:auto}
+nav.main a{color:var(--dim);text-decoration:none;padding:6px 2px;font-size:.98rem}
+nav.main a[aria-current="page"]{color:var(--ink);border-bottom:2px solid var(--gold)}
+main{padding:26px 0 10px}
+h1{font-size:1.9rem;line-height:1.2;margin:.2em 0 .4em}
+h2{font-size:1.3rem;margin:1.4em 0 .5em}
+h3{font-size:1.05rem;margin:1em 0 .3em}
+p{margin:.5em 0}
+.lede{font-size:1.12rem;color:var(--dim);max-width:44em}
+.small{font-size:.9rem;color:var(--dim)}
+.faint{color:var(--faint)}
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr)}
+  .grid.family{grid-template-columns:repeat(2,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px}
+.card h3{margin-top:0}
+.coin-card{text-decoration:none;color:var(--ink);display:block}
+.coin-card:hover{border-color:var(--teal)}
+.sym{font-weight:800;letter-spacing:.04em}
+.sym.twopi{color:var(--gold)} .sym.keel{color:var(--teal)}
+.sym.agora{color:var(--violet)} .sym.tess{color:var(--coral)}
+.height{font-size:1.7rem;font-weight:700;margin:.1em 0}
+.dot{display:inline-block;width:.62em;height:.62em;border-radius:50%;margin-right:.45em;vertical-align:baseline}
+.dot.good{background:var(--good)} .dot.warn{background:var(--warn)} .dot.bad{background:var(--bad)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;margin:.6em 0}
+.kv dt{color:var(--faint)} .kv dd{margin:0;word-break:break-all}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;word-break:break-all}
+table{width:100%;border-collapse:collapse;margin:.6em 0;font-size:.95rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--faint);font-weight:600}
+.banner{border-radius:var(--radius);padding:12px 16px;margin:14px 0;border:1px solid}
+.banner.stale{background:#2a2110;border-color:var(--warn);color:#f3dfae}
+.banner.down{background:#2a1414;border-color:var(--bad);color:#f6c1bc}
+.notice{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;margin:14px 0}
+.btn{display:inline-block;background:var(--teal);color:#07231d;font-weight:700;
+  border:none;border-radius:10px;padding:11px 18px;font-size:1rem;cursor:pointer;text-decoration:none}
+.btn.secondary{background:transparent;color:var(--teal);border:1px solid var(--teal)}
+form.search{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+form.search input{flex:1 1 260px;background:var(--bg2);border:1px solid var(--line);
+  border-radius:10px;color:var(--ink);padding:11px 14px;font-size:1rem}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.tabs button{background:var(--bg2);color:var(--dim);border:1px solid var(--line);
+  border-radius:999px;padding:8px 16px;font-size:.98rem;cursor:pointer}
+.tabs button[aria-pressed="true"]{color:#07231d;background:var(--teal);border-color:var(--teal);font-weight:700}
+footer.site{border-top:1px solid var(--line);margin-top:36px;padding:22px 0 34px;color:var(--faint);font-size:.92rem}
+footer.site a{color:var(--dim)}
+ul.tight{margin:.4em 0;padding-left:1.2em}
+ul.tight li{margin:.25em 0}
