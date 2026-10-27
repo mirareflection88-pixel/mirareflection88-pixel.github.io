@@ -2,7 +2,7 @@
    Mobile first: one column, big tap targets, nothing buried. */
 :root{
   --bg:#0b1020; --bg2:#111830; --card:#151d38; --line:#26315a;
-  --ink:#eef1ff; --dim:#a7b0d4; --faint:#7884ab;
+  --ink:#eef1ff; --dim:#a7b0d4; --faint:#9aa6cc;
   --teal:#57d9c5; --gold:#e8c476; --violet:#a78bfa; --coral:#fb9a7a;
   --good:#5fd97a; --warn:#e8c476; --bad:#f28b82;
   --radius:14px;
@@ -70,6 +70,10 @@ form.search input{flex:1 1 260px;background:var(--bg2);border:1px solid var(--li
   .coin-card .height{font-size:1.45rem}}
 dl.glossary dt{font-weight:700;margin-top:1em;color:var(--gold)}
 dl.glossary dd{margin:.2em 0 0;color:var(--dim)}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:#1a1405;padding:10px 16px;z-index:20;font-weight:700}
+.skip-link:focus{left:8px;top:8px}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+@media print{body{background:#fff;color:#111}header.site,footer.site,.skip-link{display:none}.card,.notice{border-color:#bbb;background:#fff;color:#111}a{color:#111}}
 footer.site{border-top:1px solid var(--line);margin-top:36px;padding:22px 0 34px;color:var(--faint);font-size:.92rem}
 footer.site a{color:var(--dim)}
 ul.tight{margin:.4em 0;padding-left:1.2em}

@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AGORA — Twin Blockchain</title>
 <meta name="description" content="AGORA: what it is, how much exists (fixed forever), its founding accounts and its live state on the Twin Blockchain.">
+<meta name="theme-color" content="#0b1020">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://raw.githubusercontent.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="canonical" href="https://mirareflection88-pixel.github.io/twin-blockchain/agora.html">
 <meta property="og:type" content="website">
@@ -15,6 +19,7 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="coin" data-chain="agora">
+<a class="skip-link" href="#main-content">Skip to the main content</a>
 <header class="site"><div class="wrap">
   <a class="brand" href="index.html"><span class="moon">🌙</span> Twin Blockchain</a>
   <nav class="main" aria-label="Main">
@@ -22,9 +27,10 @@
     <a href="twopi.html" aria-current="page">Coins</a>
     <a href="explorer.html">Explorer</a>
     <a href="about.html">About</a>
+    <a href="glossary.html">Glossary</a>
   </nav>
 </div></header>
-<main><div class="wrap">
+<main id="main-content"><div class="wrap">
   <nav class="tabs" aria-label="Coins">
     <a class="btn secondary" href="twopi.html">TWOPI</a>
     <a class="btn secondary" href="keel.html">KEEL</a>
@@ -34,7 +40,7 @@
   <h1><span class="sym agora">AGORA</span> — AGORA</h1>
   <p class="lede">AGORA is the family's commons — named for the public square. It is the largest of the four coins and the only one that pays out slowly as it runs: its rewards account releases a small amount with every block, so its balance falls as the chain grows.</p>
 
-  <div id="freshness" class="notice">Loading the latest published data…</div>
+  <div id="freshness" class="notice" role="status" aria-live="polite">Loading the latest published data…</div>
   <noscript><div class="banner stale"><strong>JavaScript is off.</strong>
   This page normally fills in live numbers from the chain's published data.
   The last reading verified by hand, at the site's launch on
@@ -47,7 +53,7 @@
   <h2>How much exists — fixed forever</h2>
   <div class="card">
     <p>500,000,000 AGORA is the fixed cap — no more can ever be made. Coins move out of the rewards account as emission, but the total across all accounts never passes the cap.</p>
-    <table><thead><tr><th>Account</th><th>Share</th></tr></thead>
+    <table><thead><tr><th scope="col">Account</th><th scope="col">Share</th></tr></thead>
     <tbody><tr><td>Rewards</td><td>35%</td></tr>
 <tr><td>Treasury</td><td>30%</td></tr>
 <tr><td>Community</td><td>20%</td></tr>
@@ -57,7 +63,7 @@
 
   <h2>The founding accounts, live</h2>
   <div class="card">
-    <table><thead><tr><th>Account</th><th>Address</th><th>Balance</th></tr></thead>
+    <table><thead><tr><th scope="col">Account</th><th scope="col">Address</th><th scope="col">Balance</th></tr></thead>
     <tbody id="accounts-body"><tr><td colspan="3">Loading…</td></tr></tbody></table>
     <p class="small">Balances in whole coins, from the chain's own
     published records. The validator is the account that produces this
@@ -71,10 +77,15 @@
 
   <h2>Newest blocks</h2>
   <div class="card">
-    <table><thead><tr><th>Block</th><th>Time</th><th>Hash</th><th>Transactions</th></tr></thead>
+    <table><thead><tr><th scope="col">Block</th><th scope="col">Time</th><th scope="col">Hash</th><th scope="col">Transactions</th></tr></thead>
     <tbody id="recent-blocks"><tr><td colspan="4">Loading…</td></tr></tbody></table>
     <p class="small">See every block in the <a href="explorer.html">explorer</a>.</p>
   </div>
+
+  <div class="notice"><strong>New to these words?</strong>
+  <a href="glossary.html">Validator</a>, <a href="glossary.html">anchor</a>,
+  <a href="glossary.html">height</a> and <a href="glossary.html">supply</a>
+  are explained in plain language in the glossary.</div>
 
   <div class="notice"><strong>Plain words:</strong> AGORA is not for
   sale, it has no market price, and this page is not an offer. It is

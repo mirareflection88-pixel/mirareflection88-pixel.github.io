@@ -12,9 +12,14 @@
 <meta property="og:description" content="Browse and search every block on the Twin Blockchain family.">
 <meta property="og:url" content="https://mirareflection88-pixel.github.io/twin-blockchain/explorer.html">
 <meta property="og:image" content="https://mirareflection88-pixel.github.io/twin-blockchain/assets/favicon.svg">
+<meta name="theme-color" content="#0b1020">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://raw.githubusercontent.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="explorer">
+<a class="skip-link" href="#main-content">Skip to the main content</a>
 <header class="site"><div class="wrap">
   <a class="brand" href="index.html"><span class="moon">🌙</span> Twin Blockchain</a>
   <nav class="main" aria-label="Main">
@@ -22,15 +27,16 @@
     <a href="twopi.html">Coins</a>
     <a href="explorer.html" aria-current="page">Explorer</a>
     <a href="about.html">About</a>
+    <a href="glossary.html">Glossary</a>
   </nav>
 </div></header>
-<main><div class="wrap">
+<main id="main-content"><div class="wrap">
   <h1>Block explorer</h1>
   <p class="lede">Every block the family has ever produced is in the
   published record. Pick a chain to see its newest blocks, or search any
   chain by a block's number or its fingerprint (hash).</p>
 
-  <div id="freshness" class="notice">Loading the latest published data…</div>
+  <div id="freshness" class="notice" role="status" aria-live="polite">Loading the latest published data…</div>
   <noscript><div class="banner stale"><strong>JavaScript is off.</strong>
   The explorer needs JavaScript to read the published block record.
   The last reading verified by hand, at the site's launch on
@@ -54,7 +60,7 @@
     <button type="button" data-chain="hub" aria-pressed="false">Hub</button>
   </div>
   <div class="card">
-    <table><thead><tr><th>Block</th><th>Time</th><th>Hash</th><th>Transactions</th></tr></thead>
+    <table><thead><tr><th scope="col">Block</th><th scope="col">Time</th><th scope="col">Hash</th><th scope="col">Transactions</th></tr></thead>
     <tbody id="explorer-blocks"><tr><td colspan="4">Loading…</td></tr></tbody></table>
     <p class="small" id="explorer-note"></p>
   </div>

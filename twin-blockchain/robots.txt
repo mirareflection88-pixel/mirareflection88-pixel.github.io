@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mirareflection88-pixel.github.io/twin-blockchain/sitemap.xml

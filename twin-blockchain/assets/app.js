@@ -172,7 +172,8 @@ async function renderExplorer() {
     const q = document.getElementById("search-input").value.trim();
     const out = document.getElementById("search-result");
     if (!q) return;
-    out.textContent = "Searching…";
+    out.textContent = blocksIndex ? "Searching the published record…"
+      : "Loading the block index — the first search downloads the full published record (a few megabytes) and can take a moment on a slow connection. Later searches are instant.";
     try {
       if (!blocksIndex) blocksIndex = await fetchJSON("blocks-index.json");
     } catch (e) {
@@ -192,11 +193,15 @@ async function renderExplorer() {
       if (hits.length >= 20) break;
     }
     if (!hits.length) {
-      out.innerHTML = `<div class="notice">No block found for “${q.replace(/</g, "&lt;")}”
-        on any family chain. Check the number or hash and try again.</div>`;
+      out.innerHTML = `<div class="notice">No block found for “${q.replace(/</g, "&lt;")}”.
+        The search checked every block in the published record of all five chains
+        (TWOPI, KEEL, AGORA, TESSERA and the hub). A block number must be a whole
+        number a chain has actually reached; a hash search matches the start of a
+        block's fingerprint, so a longer paste is a stricter check. Check the
+        number or hash and try again.</div>`;
       return;
     }
-    out.innerHTML = `<table><thead><tr><th>Chain</th><th>Block</th><th>Time</th><th>Hash</th></tr></thead>
+    out.innerHTML = `<p class="small" role="status">Found ${hits.length} block${hits.length === 1 ? "" : "s"} matching your search across the family.</p><table><thead><tr><th scope="col">Chain</th><th scope="col">Block</th><th scope="col">Time</th><th scope="col">Hash</th></tr></thead>
       <tbody>${hits.map(x => `<tr><td>${x.key.toUpperCase()}</td><td>${fmtInt(x.h)}</td>
         <td>${fmtTime(x.ts)}</td><td class="mono">${x.hash}</td></tr>`).join("")}</tbody></table>`;
   });
