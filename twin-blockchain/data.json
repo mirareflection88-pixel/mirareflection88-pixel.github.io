@@ -230,7 +230,7 @@
    "height": 6345,
    "key": "hub",
    "name": "The Family Hub",
-   "posture": "normal",
+   "posture": null,
    "published_at": 1793061922,
    "recent_blocks": [
     {
@@ -445,10 +445,11 @@
    ],
    "state": "published",
    "state_root": "0bcd1fb3ce9b614c8490cfda4fffb00ef31d8ecbf46227150b4ed3f5882c8460",
-   "status_feed": "live",
+   "status_error": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "status_feed": "error",
    "supply_units": null,
    "tip_hash": "b1db5ba85e41c2354c890525c03d5b2efc18846337b5c387a56f5a739ef3b962",
-   "tip_timestamp": 1793061909
+   "tip_timestamp": 1793061920
   },
   "keel": {
    "accounts": [
@@ -1043,6 +1044,6 @@
   "proof": "COMBINATION-PROOF-2026-10-25 (house record)",
   "state": "COMBINED"
  },
- "generated_at": 1793061974,
+ "generated_at": 1793062292,
  "generator": "twin-blockchain-site publish_snapshot.py"
 }
