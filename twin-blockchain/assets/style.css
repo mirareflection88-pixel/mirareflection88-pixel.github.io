@@ -65,6 +65,11 @@ form.search input{flex:1 1 260px;background:var(--bg2);border:1px solid var(--li
 .tabs button{background:var(--bg2);color:var(--dim);border:1px solid var(--line);
   border-radius:999px;padding:8px 16px;font-size:.98rem;cursor:pointer}
 .tabs button[aria-pressed="true"]{color:#07231d;background:var(--teal);border-color:var(--teal);font-weight:700}
+.tabs a.btn[aria-current="page"]{background:var(--teal);color:#07231d;border-color:var(--teal)}
+@media(max-width:640px){.health-label{font-size:.88rem;line-height:1.35;display:inline-block}
+  .coin-card .height{font-size:1.45rem}}
+dl.glossary dt{font-weight:700;margin-top:1em;color:var(--gold)}
+dl.glossary dd{margin:.2em 0 0;color:var(--dim)}
 footer.site{border-top:1px solid var(--line);margin-top:36px;padding:22px 0 34px;color:var(--faint);font-size:.92rem}
 footer.site a{color:var(--dim)}
 ul.tight{margin:.4em 0;padding-left:1.2em}

@@ -3,14 +3,23 @@
    house publisher) and renders it. If the snapshot is old, the page
    SAYS so — stale data is never dressed as live. */
 "use strict";
-const DATA_BASE = "https://raw.githubusercontent.com/mirareflection88-pixel/mirareflection88-pixel.github.io/twin-chain-data/twin-blockchain/";
+const DATA_BASES = [
+  "https://raw.githubusercontent.com/mirareflection88-pixel/mirareflection88-pixel.github.io/twin-chain-data/twin-blockchain/",
+  "https://cdn.jsdelivr.net/gh/mirareflection88-pixel/mirareflection88-pixel.github.io@twin-chain-data/twin-blockchain/"
+];
 const STALE_AFTER = 15 * 60; // seconds
 
 function bucket() { return Math.floor(Date.now() / 300000); }
 async function fetchJSON(name) {
-  const r = await fetch(DATA_BASE + name + "?t=" + bucket(), { cache: "no-store" });
-  if (!r.ok) throw new Error(name + " HTTP " + r.status);
-  return r.json();
+  let lastErr = null;
+  for (const base of DATA_BASES) {
+    try {
+      const r = await fetch(base + name + "?t=" + bucket(), { cache: "no-store" });
+      if (!r.ok) throw new Error(name + " HTTP " + r.status);
+      return await r.json();
+    } catch (e) { lastErr = e; }
+  }
+  throw lastErr || new Error(name + " could not be loaded");
 }
 function fmtInt(n) {
   if (n === null || n === undefined) return "—";
@@ -38,7 +47,7 @@ function healthOf(chain, now) {
   /* Honest health: based on the chain's OWN publication time. */
   if (!chain || chain.state !== "published") return ["bad", "not publishing"];
   const age = now - (chain.published_at || 0);
-  if (chain.status_feed === "error") return ["warn", "last published " + ago(chain.published_at) + " — its status feed reported an error"];
+  if (chain.status_feed === "error") return ["warn", "last published " + ago(chain.published_at) + " · feed error"];
   if (age <= 900) return ["good", "producing — updated " + ago(chain.published_at)];
   return ["warn", "last published " + ago(chain.published_at)];
 }
@@ -84,7 +93,7 @@ function chainCard(chain, href) {
     <h3><span class="sym ${sym}">${chain.coin || "HUB"}</span> · ${chain.name}</h3>
     <p class="height">${fmtInt(chain.height)}</p>
     <p class="small">current block height</p>
-    <p><span class="dot ${cls}"></span>${label}</p>
+    <p><span class="dot ${cls}"></span><span class="health-label">${label}</span></p>
     <p class="small faint">Latest block: ${fmtTime(chain.tip_timestamp)}</p>
   </a>`;
 }
