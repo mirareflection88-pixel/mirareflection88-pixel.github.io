@@ -14,7 +14,8 @@ async function fetchJSON(name) {
   let lastErr = null;
   for (const base of DATA_BASES) {
     try {
-      const r = await fetch(base + name + "?t=" + bucket(), { cache: "no-store" });
+      const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 8000);
+      const r = await fetch(base + name + "?t=" + bucket(), { cache: "no-store", signal: ctl.signal }); clearTimeout(timer);
       if (!r.ok) throw new Error(name + " HTTP " + r.status);
       return await r.json();
     } catch (e) { lastErr = e; }
@@ -64,7 +65,7 @@ function freshnessBanner(snap) {
   } else {
     el.className = "notice";
     el.textContent = "Data updated " + ago(snap.generated_at)
-      + " (" + fmtTime(snap.generated_at) + "). The publisher refreshes "
+      + " — Exact update time: " + fmtTime(snap.generated_at) + ". The publisher refreshes "
       + "this page's data about every five minutes.";
   }
 }
@@ -167,6 +168,7 @@ async function renderExplorer() {
       document.getElementById("search-result").innerHTML = "";
     });
   });
+  document.querySelectorAll(".example-search").forEach(b => b.addEventListener("click", () => { document.getElementById("search-input").value = b.dataset.q; document.getElementById("search-form").requestSubmit(); }));
   document.getElementById("search-form").addEventListener("submit", async ev => {
     ev.preventDefault();
     const q = document.getElementById("search-input").value.trim();
@@ -201,7 +203,7 @@ async function renderExplorer() {
         number or hash and try again.</div>`;
       return;
     }
-    out.innerHTML = `<p class="small" role="status">Found ${hits.length} block${hits.length === 1 ? "" : "s"} matching your search across the family.</p><table><thead><tr><th scope="col">Chain</th><th scope="col">Block</th><th scope="col">Time</th><th scope="col">Hash</th></tr></thead>
+    out.innerHTML = `<p class="small" role="status">Found ${hits.length} block${hits.length === 1 ? "" : "s"} matching your search — searched ${Object.values(blocksIndex).reduce((n, a) => n + a.length, 0).toLocaleString("en-US")} blocks in the published record across the family.</p><table><thead><tr><th scope="col">Chain</th><th scope="col">Block</th><th scope="col">Time</th><th scope="col">Hash</th></tr></thead>
       <tbody>${hits.map(x => `<tr><td>${x.key.toUpperCase()}</td><td>${fmtInt(x.h)}</td>
         <td>${fmtTime(x.ts)}</td><td class="mono">${x.hash}</td></tr>`).join("")}</tbody></table>`;
   });

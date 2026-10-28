@@ -16,6 +16,7 @@
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://raw.githubusercontent.com">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
+<meta name="referrer" content="no-referrer-when-downgrade">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="explorer">
@@ -45,10 +46,12 @@
 
   <form class="search" id="search-form">
     <label class="small" for="search-input">Search all chains by block number or hash</label>
-    <input id="search-input" name="q" type="text" inputmode="search"
+    <input id="search-input" name="q" type="text" inputmode="search" enterkeyhint="search" aria-describedby="search-hint"
       placeholder="e.g. 3941 or 37421f778f…" autocomplete="off">
     <button class="btn" type="submit">Search</button>
   </form>
+  <p class="small" id="search-hint">Type a whole block number (for example 3941) or the start of a block hash. Hash searches match from the first character, so paste at least the first 8 characters.</p>
+  <p class="small" id="example-searches">Try an example: <button type="button" class="example-search" data-q="3941">block 3941</button> <button type="button" class="example-search" data-q="12723">block 12723</button></p>
   <div id="search-result" aria-live="polite"></div>
 
   <h2>Newest blocks</h2>
@@ -60,7 +63,7 @@
     <button type="button" data-chain="hub" aria-pressed="false">Hub</button>
   </div>
   <div class="card">
-    <table><thead><tr><th scope="col">Block</th><th scope="col">Time</th><th scope="col">Hash</th><th scope="col">Transactions</th></tr></thead>
+    <table><caption>Newest blocks on the selected chain</caption><thead><tr><th scope="col">Block</th><th scope="col">Time</th><th scope="col">Hash</th><th scope="col">Transactions</th></tr></thead>
     <tbody id="explorer-blocks"><tr><td colspan="4">Loading…</td></tr></tbody></table>
     <p class="small" id="explorer-note"></p>
   </div>

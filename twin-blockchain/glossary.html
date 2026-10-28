@@ -16,6 +16,7 @@
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://raw.githubusercontent.com">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
+<meta name="referrer" content="no-referrer-when-downgrade">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -36,57 +37,65 @@
   each one in ordinary English — no prior knowledge assumed.</p>
 
   <dl class="glossary">
-    <dt>Block</dt>
+    <dt id="block">Block</dt>
     <dd>One sealed page of a chain's ledger. Each block records what
     happened in its moment, and once sealed it is not rewritten.</dd>
-    <dt>Hash (fingerprint)</dt>
+    <dt id="hash">Hash (fingerprint)</dt>
     <dd>A short string of characters made from everything in a block.
     Change one letter anywhere in the block and the fingerprint no
     longer matches — that is how anyone can check the record.</dd>
-    <dt>Height</dt>
+    <dt id="height">Height</dt>
     <dd>How many blocks a chain has produced, counted from its first
     block. A chain's height is its age in blocks: higher means it has
     been running longer.</dd>
-    <dt>Validator</dt>
+    <dt id="validator">Validator</dt>
     <dd>The account that produces a chain's blocks — the keeper that
     seals each new page of the ledger in turn.</dd>
-    <dt>Anchor</dt>
+    <dt id="anchor">Anchor</dt>
     <dd>A fingerprint of one chain written into another chain (here,
     into the family hub), so the first chain's history can later be
     checked against a record it cannot quietly change itself.</dd>
-    <dt>Hub</dt>
+    <dt id="hub">Hub</dt>
     <dd>The family's tying-together chain. Each coin chain anchors
     into the hub, which is what makes four chains one combination.</dd>
-    <dt>Coin chain (spoke)</dt>
+    <dt id="spoke">Coin chain (spoke)</dt>
     <dd>One of the four chains that carries a coin — TWOPI, KEEL,
     AGORA or TESSERA. Each keeps its own ledger and its own blocks.</dd>
-    <dt>Snapshot</dt>
+    <dt id="snapshot">Snapshot</dt>
     <dd>The published copy of the chains' own records that this site
     reads. A small publisher posts a fresh snapshot about every five
     minutes, and every page shows the snapshot's time, so you always
     know how current the numbers in front of you are.</dd>
-    <dt>Supply / cap</dt>
+    <dt id="supply">Supply / cap</dt>
     <dd>How much of a coin exists in total. For every coin in this
     family the amount is fixed at a cap set when the coin was created
     — no more can ever be made.</dd>
-    <dt>Ledger</dt>
+    <dt id="ledger">Ledger</dt>
     <dd>The full record a chain keeps — every block, in order,
     from the first one to the newest. A chain's ledger is its
     history book, and it is written so it cannot be quietly
     rewritten afterwards.</dd>
-    <dt>Transaction</dt>
+    <dt id="transaction">Transaction</dt>
     <dd>One recorded action inside a block — for example, the
     anchor submissions that joined this family. A block can hold
     one transaction, many, or none.</dd>
-    <dt>First block (genesis)</dt>
+    <dt id="genesis">First block (genesis)</dt>
     <dd>The very first block of a chain, created when the chain
     launched. Every later block is counted from it — that count
     is the chain's height.</dd>
-    <dt>Combination</dt>
+    <dt id="combination">Combination</dt>
     <dd>This family's joining, verified end to end on October
     25, 2026: the four coin chains anchored into one hub, so the
     whole family can be checked as one piece.</dd>
-    <dt>Explorer</dt>
+    <dt id="block-time">Block time</dt>
+    <dd>The moment a block was sealed, as recorded in the block itself. Times on this site are shown in your local timezone with the zone named.</dd>
+    <dt id="burn">Burn</dt>
+    <dd>Coins permanently removed from circulation. TWOPI stands a hair under its cap because three anchor fees were burned when the family combined.</dd>
+    <dt id="emission">Emission</dt>
+    <dd>Coins released slowly over time by design. AGORA is the family's only emitting coin: its rewards account pays out a small amount with every block, and the total never passes its fixed cap.</dd>
+    <dt id="public-record">Public record</dt>
+    <dd>The published snapshot and block index anyone can fetch and check — the same files this site reads. If this page and the public record ever disagreed, the record would win and the page would be corrected.</dd>
+    <dt id="explorer">Explorer</dt>
     <dd>This site's search tool: it lets anyone look up any block by
     its number (height) or its fingerprint (hash), and check the
     family's record for themselves.</dd>
