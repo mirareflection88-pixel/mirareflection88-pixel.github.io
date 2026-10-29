@@ -40,18 +40,18 @@
   <div id="freshness" class="notice" role="status" aria-live="polite">Loading the latest published data…</div>
   <noscript><div class="banner stale"><strong>JavaScript is off.</strong>
   The explorer needs JavaScript to read the published block record.
-  The last reading verified by hand, at the site's launch on
+  The last reading verified by hand, on
   October 29, 2026, stood at: TWOPI block 17,556 · KEEL block 12,307 ·
   AGORA block 12,302 · TESSERA block 12,296 · hub block 12,132.</div></noscript>
 
   <form class="search" id="search-form">
     <label class="small" for="search-input">Search all chains by block number or hash</label>
     <input id="search-input" name="q" type="text" inputmode="search" enterkeyhint="search" aria-describedby="search-hint"
-      placeholder="e.g. 3941 or 37421f778f…" autocomplete="off">
+      placeholder="e.g. 3941 or 37421f778f…" spellcheck="false" autocapitalize="off" autocomplete="off">
     <button class="btn" type="submit">Search</button>
   </form>
   <p class="small" id="search-hint">Type a whole block number (for example 3941) or the start of a block hash. Hash searches match from the first character, so paste at least the first 8 characters.</p>
-  <p class="small" id="example-searches">Try an example: <button type="button" class="example-search" data-q="3941">block 3941</button> <button type="button" class="example-search" data-q="17556">block 17556</button></p>
+  <p class="small" id="example-searches">Try an example: <button type="button" class="example-search" data-q="3941">block 3941</button> <button type="button" class="example-search" data-q="17556">block 17556</button> <button type="button" id="clear-search">Clear search</button></p>
   <div id="search-result" aria-live="polite"></div>
 
   <h2>Newest blocks</h2>
