@@ -60,7 +60,7 @@
    "height": 13004,
    "key": "agora",
    "name": "AGORA",
-   "posture": "normal",
+   "posture": null,
    "published_at": 1793289300,
    "recent_blocks": [
     {
@@ -216,10 +216,11 @@
    ],
    "state": "published",
    "state_root": "0732903ae2cdd80680a0dfe5d8339006fbb0f50d1f7f1b6bf19d4dbf18ceec11",
-   "status_feed": "live",
+   "status_error": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "status_feed": "error",
    "supply_units": 500000000.0,
    "tip_hash": "2c445f225979c77ae01f6278fe248ee1f3bf3b8e2a4ac402d06963dfa4089beb",
-   "tip_timestamp": 1793289294
+   "tip_timestamp": 1793289299
   },
   "hub": {
    "accounts": [],
@@ -229,7 +230,7 @@
    "height": 12857,
    "key": "hub",
    "name": "The Family Hub",
-   "posture": "normal",
+   "posture": null,
    "published_at": 1793289300,
    "recent_blocks": [
     {
@@ -444,10 +445,11 @@
    ],
    "state": "published",
    "state_root": "4f6e9d5e28ca9091a9986fdc60811b9f78aa9224ecd0ccf41d796ba206988477",
-   "status_feed": "live",
+   "status_error": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "status_feed": "error",
    "supply_units": null,
    "tip_hash": "0bf6caa04e46aa30f021e76f8f28f885ec8f503372ec45a149a2ef140f34a2bc",
-   "tip_timestamp": 1793289294
+   "tip_timestamp": 1793289299
   },
   "keel": {
    "accounts": [
@@ -483,7 +485,7 @@
    "height": 12982,
    "key": "keel",
    "name": "KEEL",
-   "posture": "normal",
+   "posture": null,
    "published_at": 1793289295,
    "recent_blocks": [
     {
@@ -639,7 +641,8 @@
    ],
    "state": "published",
    "state_root": "0514b94c424d86c55cead581c86070441cb1f47fa84cb6e020885fc949820883",
-   "status_feed": "live",
+   "status_error": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "status_feed": "error",
    "supply_units": 100000000.0,
    "tip_hash": "8807ce58d4b56a8f8a4b2e0d5f10b9c8e2dc9445ccdcbb31b4c929b2c8dff6a8",
    "tip_timestamp": 1793289295
@@ -678,7 +681,7 @@
    "height": 12964,
    "key": "tessera",
    "name": "TESSERA",
-   "posture": "normal",
+   "posture": null,
    "published_at": 1793289296,
    "recent_blocks": [
     {
@@ -834,7 +837,8 @@
    ],
    "state": "published",
    "state_root": "2e73146f16806eae092ca8e40d33ff4b04dc4d11bb2641316d053fe452cb605e",
-   "status_feed": "live",
+   "status_error": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "status_feed": "error",
    "supply_units": 100000000.0,
    "tip_hash": "ff95ddecbeb0f8aa3f73e4988c1c1ef4bd54030c2fb7fe02b16c73ea95668303",
    "tip_timestamp": 1793289296
@@ -873,7 +877,7 @@
    "height": 17568,
    "key": "twopi",
    "name": "TWOPI",
-   "posture": "normal",
+   "posture": null,
    "published_at": 1793289297,
    "recent_blocks": [
     {
@@ -1029,16 +1033,17 @@
    ],
    "state": "published",
    "state_root": "87d7bc9c74bcc1e1e72c184e0ec64db970bbe8ab5f49e37ebfbc77552c835607",
-   "status_feed": "live",
+   "status_error": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "status_feed": "error",
    "supply_units": 999999999.999997,
    "tip_hash": "76f05f00ffb035b1096d9346df1425a1b62f7591bbe42abc4bb2c16b8e20f3f5",
-   "tip_timestamp": 1793289292
+   "tip_timestamp": 1793289297
   }
  },
  "combination": {
   "proof": "COMBINATION-PROOF-2026-10-25 (house record)",
   "state": "COMBINED"
  },
- "generated_at": 1793289387,
+ "generated_at": 1793289694,
  "generator": "twin-blockchain-site publish_snapshot.py"
 }
