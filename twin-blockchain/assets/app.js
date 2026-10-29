@@ -183,6 +183,9 @@ async function renderExplorer() {
     });
   });
   document.querySelectorAll(".example-search").forEach(b => b.addEventListener("click", () => { document.getElementById("search-input").value = b.dataset.q; document.getElementById("search-form").requestSubmit(); }));
+  document.getElementById("clear-search").addEventListener("click", () => { document.getElementById("search-input").value = ""; document.getElementById("search-result").innerHTML = ""; document.getElementById("search-input").focus(); });
+  const initialQ = new URLSearchParams(location.search).get("q");
+  if (initialQ) { document.getElementById("search-input").value = initialQ; document.getElementById("search-form").requestSubmit(); }
   document.getElementById("search-form").addEventListener("submit", async ev => {
     ev.preventDefault();
     const q = document.getElementById("search-input").value.trim();
@@ -210,14 +213,14 @@ async function renderExplorer() {
     }
     if (!hits.length) {
       out.innerHTML = `<div class="notice">No block found for “${q.replace(/</g, "&lt;")}”.
-        The search checked every block in the published record of all five chains
+        The search checked ${Object.values(blocksIndex).reduce((n, a) => n + a.length, 0).toLocaleString("en-US")} blocks in the published record of all five chains
         (TWOPI, KEEL, AGORA, TESSERA and the hub). A block number must be a whole
         number a chain has actually reached; a hash search matches the start of a
         block's fingerprint, so a longer paste is a stricter check. Check the
         number or hash and try again.</div>`;
       return;
     }
-    out.innerHTML = `<p class="small" role="status">Found ${hits.length} block${hits.length === 1 ? "" : "s"} matching your search — searched ${Object.values(blocksIndex).reduce((n, a) => n + a.length, 0).toLocaleString("en-US")} blocks in the published record across the family.</p><table><thead><tr><th scope="col">Chain</th><th scope="col">Block</th><th scope="col">Time</th><th scope="col">Hash</th></tr></thead>
+    out.innerHTML = `<p class="small" role="status">Found ${hits.length} block${hits.length === 1 ? "" : "s"} matching your search — searched ${Object.values(blocksIndex).reduce((n, a) => n + a.length, 0).toLocaleString("en-US")} blocks in the published record across the family.</p><table><caption>Blocks matching your search</caption><thead><tr><th scope="col">Chain</th><th scope="col">Block</th><th scope="col">Time</th><th scope="col">Hash</th></tr></thead>
       <tbody>${hits.map(x => `<tr><td>${x.key.toUpperCase()}</td><td>${fmtInt(x.h)}</td>
         <td>${fmtTime(x.ts)}</td><td class="mono">${x.hash}</td></tr>`).join("")}</tbody></table>`;
   });
