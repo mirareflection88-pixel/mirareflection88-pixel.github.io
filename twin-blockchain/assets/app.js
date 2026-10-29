@@ -144,6 +144,20 @@ async function renderCoin(key) {
 /* ---------------- explorer ---------------- */
 let explorerChain = "twopi";
 let blocksIndex = null;
+/* The block index is published as one shard per chain
+   (blocks-index-<chain>.json): the single combined file outgrew
+   the publisher's push route in Oct 2026. The shards merge here
+   into the same {chain: [[height, hash, time], ...]} shape the
+   search below has always used — the full published record,
+   nothing trimmed. */
+async function loadBlocksIndex() {
+  const keys = ["twopi", "keel", "agora", "tessera", "hub"];
+  const parts = await Promise.all(
+    keys.map(k => fetchJSON("blocks-index-" + k + ".json")));
+  const merged = {};
+  keys.forEach((k, i) => { merged[k] = parts[i]; });
+  return merged;
+}
 function renderExplorerBlocks(snap) {
   const c = snap.chains[explorerChain];
   document.getElementById("explorer-blocks").innerHTML =
@@ -177,7 +191,7 @@ async function renderExplorer() {
     out.textContent = blocksIndex ? "Searching the published record…"
       : "Loading the block index — the first search downloads the full published record (a few megabytes) and can take a moment on a slow connection. Later searches are instant.";
     try {
-      if (!blocksIndex) blocksIndex = await fetchJSON("blocks-index.json");
+      if (!blocksIndex) blocksIndex = await loadBlocksIndex();
     } catch (e) {
       out.textContent = "The block index could not be loaded (" + e.message + ").";
       return;
