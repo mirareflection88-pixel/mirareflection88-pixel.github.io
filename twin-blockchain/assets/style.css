@@ -73,7 +73,7 @@ form.search input{flex:1 1 260px;background:var(--bg2);border:1px solid var(--li
 @media(max-width:640px){.health-label{font-size:.88rem;line-height:1.35;display:inline-block}
   .coin-card .height{font-size:1.45rem}}
 dl.glossary dt{font-weight:700;margin-top:1em;color:var(--gold)}
-dl.glossary dd{margin:.2em 0 0;color:var(--dim)}
+dl.glossary dd{margin:.2em 0 0;color:var(--dim);max-width:44em}
 .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:#1a1405;padding:10px 16px;z-index:20;font-weight:700}
 .skip-link:focus{left:8px;top:8px}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
@@ -82,3 +82,4 @@ footer.site{border-top:1px solid var(--line);margin-top:36px;padding:22px 0 34px
 footer.site a{color:var(--dim)}
 ul.tight{margin:.4em 0;padding-left:1.2em}
 ul.tight li{margin:.25em 0}
+::selection{background:#e8c476;color:#1a1405}
