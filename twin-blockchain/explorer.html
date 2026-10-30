@@ -13,6 +13,7 @@
 <meta property="og:url" content="https://mirareflection88-pixel.github.io/twin-blockchain/explorer.html">
 <meta property="og:image" content="https://mirareflection88-pixel.github.io/twin-blockchain/assets/favicon.svg">
 <meta name="theme-color" content="#0b1020">
+<meta name="color-scheme" content="dark">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://raw.githubusercontent.com">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -40,9 +41,9 @@
   <div id="freshness" class="notice" role="status" aria-live="polite">Loading the latest published data…</div>
   <noscript><div class="banner stale"><strong>JavaScript is off.</strong>
   The explorer needs JavaScript to read the published block record.
-  The last reading verified by hand, on
-  October 29, 2026, stood at: TWOPI block 17,556 · KEEL block 12,307 ·
-  AGORA block 12,302 · TESSERA block 12,296 · hub block 12,132.</div></noscript>
+  The last reading recorded by the house watch, on
+  October 30, 2026, stood at: TWOPI block 19,935 · KEEL block 15,980 ·
+  AGORA block 16,041 · TESSERA block 16,004 · hub block 15,912.</div></noscript>
 
   <form class="search" id="search-form">
     <label class="small" for="search-input">Search all chains by block number or hash</label>
@@ -51,7 +52,7 @@
     <button class="btn" type="submit">Search</button>
   </form>
   <p class="small" id="search-hint">Type a whole block number (for example 3941) or the start of a block hash. Hash searches match from the first character, so paste at least the first 8 characters.</p>
-  <p class="small" id="example-searches">Try an example: <button type="button" class="example-search" data-q="3941">block 3941</button> <button type="button" class="example-search" data-q="17556">block 17556</button> <button type="button" id="clear-search">Clear search</button></p>
+  <p class="small" id="example-searches">Try an example: <button type="button" class="example-search" data-q="3941">block 3941</button> <button type="button" class="example-search" data-q="19935">block 19935</button> <button type="button" id="clear-search">Clear search</button></p>
   <div id="search-result" aria-live="polite"></div>
 
   <h2>Newest blocks</h2>
@@ -67,6 +68,8 @@
     <tbody id="explorer-blocks"><tr><td colspan="4">Loading…</td></tr></tbody></table>
     <p class="small" id="explorer-note"></p>
   </div>
+
+  <div class="notice"><strong>Search tips.</strong> A whole number searches by block height on every chain at once. Letters and numbers together search by hash — paste at least the first 8 characters of the fingerprint. Account addresses are not searched here; each coin page lists its own founding accounts.</div>
 
   <div class="notice"><strong>What am I looking at?</strong> A block is
   one sealed page of a chain's ledger. Its <em>hash</em> is a fingerprint
