@@ -13,6 +13,7 @@
 <meta property="og:url" content="https://mirareflection88-pixel.github.io/twin-blockchain/glossary.html">
 <meta property="og:image" content="https://mirareflection88-pixel.github.io/twin-blockchain/assets/favicon.svg">
 <meta name="theme-color" content="#0b1020">
+<meta name="color-scheme" content="dark">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://raw.githubusercontent.com">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -35,7 +36,7 @@
   <h1>The words, in plain language</h1>
   <p class="lede">This site uses a handful of blockchain words. Here is
   each one in ordinary English — no prior knowledge assumed.</p>
-  <p class="small" id="glossary-index">Jump to a word: <a href="#block">Block</a> · <a href="#hash">Hash</a> · <a href="#height">Height</a> · <a href="#validator">Validator</a> · <a href="#anchor">Anchor</a> · <a href="#hub">Hub</a> · <a href="#spoke">Coin chain</a> · <a href="#snapshot">Snapshot</a> · <a href="#supply">Supply</a> · <a href="#ledger">Ledger</a> · <a href="#transaction">Transaction</a> · <a href="#genesis">First block</a> · <a href="#combination">Combination</a> · <a href="#block-time">Block time</a> · <a href="#burn">Burn</a> · <a href="#emission">Emission</a> · <a href="#fee">Fee</a> · <a href="#address">Address</a> · <a href="#wallet">Wallet</a> · <a href="#public-record">Public record</a> · <a href="#explorer">Explorer</a></p>
+  <p class="small" id="glossary-index">Jump to a word: <a href="#block">Block</a> · <a href="#hash">Hash</a> · <a href="#height">Height</a> · <a href="#validator">Validator</a> · <a href="#anchor">Anchor</a> · <a href="#hub">Hub</a> · <a href="#spoke">Coin chain</a> · <a href="#snapshot">Snapshot</a> · <a href="#supply">Supply</a> · <a href="#ledger">Ledger</a> · <a href="#transaction">Transaction</a> · <a href="#genesis">First block</a> · <a href="#combination">Combination</a> · <a href="#block-time">Block time</a> · <a href="#burn">Burn</a> · <a href="#emission">Emission</a> · <a href="#fee">Fee</a> · <a href="#address">Address</a> · <a href="#wallet">Wallet</a> · <a href="#public-record">Public record</a> · <a href="#publisher">Publisher</a> · <a href="#node">Node</a> · <a href="#tip">Tip</a> · <a href="#explorer">Explorer</a></p>
 
   <dl class="glossary">
     <dt id="block">Block</dt>
@@ -102,6 +103,12 @@
     <dd>The string of characters that identifies one account on a chain — where its balance is kept and where its actions are recorded. Each coin page prints its founding accounts' addresses in full.</dd>
     <dt id="wallet">Wallet</dt>
     <dd>A tool that holds the keys to an account and signs actions for it. This site is not a wallet: it holds no keys, takes no signatures, and cannot move any coin.</dd>
+    <dt id="publisher">Publisher</dt>
+    <dd>The small house program that reads the chains' own records and posts a fresh snapshot to this site about every five minutes. It only ever reads and publishes — it cannot change a chain.</dd>
+    <dt id="node">Node</dt>
+    <dd>One running copy of a chain's program, keeping its ledger and producing or checking its blocks. This site does not connect to a node directly; it reads the published snapshot the publisher posts.</dd>
+    <dt id="tip">Tip (newest block)</dt>
+    <dd>The most recent block a chain has produced — the top of its ledger right now. A coin page shows its tip's time and fingerprint in the live panel.</dd>
     <dt id="explorer">Explorer</dt>
     <dd>This site's search tool: it lets anyone look up any block by
     its number (height) or its fingerprint (hash), and check the
