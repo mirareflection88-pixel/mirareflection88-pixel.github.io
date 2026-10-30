@@ -103,7 +103,7 @@ async function renderHome() {
   if (!snap) return;
   const order = [["twopi", "twopi.html"], ["keel", "keel.html"],
                  ["agora", "agora.html"], ["tessera", "tessera.html"],
-                 ["hub", "explorer.html"]];
+                 ["hub", "explorer.html?chain=hub"]];
   document.getElementById("family-grid").innerHTML =
     order.map(([k, href]) => chainCard(snap.chains[k], href)).join("");
   const a = document.getElementById("anchor-list");
@@ -166,7 +166,7 @@ function renderExplorerBlocks(snap) {
        <td class="mono">${b.hash}</td><td>${b.txs}</td></tr>`).join("");
   document.getElementById("explorer-note").textContent =
     "Showing the newest " + c.recent_blocks.length + " blocks of " + c.name +
-    " (chain " + c.chain + "). Use search to find any block by its number or hash.";
+    " (chain " + c.chain + "), which stands at block " + fmtInt(c.height) + " in total. Use search to find any block by its number or hash.";
 }
 async function renderExplorer() {
   const snap = await loadSnapshot();
@@ -184,6 +184,8 @@ async function renderExplorer() {
   });
   document.querySelectorAll(".example-search").forEach(b => b.addEventListener("click", () => { document.getElementById("search-input").value = b.dataset.q; document.getElementById("search-form").requestSubmit(); }));
   document.getElementById("clear-search").addEventListener("click", () => { document.getElementById("search-input").value = ""; document.getElementById("search-result").innerHTML = ""; document.getElementById("search-input").focus(); });
+  const initialChain = new URLSearchParams(location.search).get("chain");
+  if (initialChain && ["twopi", "keel", "agora", "tessera", "hub"].includes(initialChain)) { explorerChain = initialChain; document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-pressed", b.dataset.chain === initialChain ? "true" : "false")); renderExplorerBlocks(snap); }
   const initialQ = new URLSearchParams(location.search).get("q");
   if (initialQ) { document.getElementById("search-input").value = initialQ; document.getElementById("search-form").requestSubmit(); }
   document.getElementById("search-form").addEventListener("submit", async ev => {
