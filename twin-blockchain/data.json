@@ -486,7 +486,7 @@
    "key": "keel",
    "name": "KEEL",
    "posture": null,
-   "published_at": 1793374644,
+   "published_at": 1793434131,
    "recent_blocks": [
     {
      "hash": "ba2f47442dd8f1e74181b637a1b08cd0212c0c057e8067e2d1a2a7258b3b267f",
@@ -1044,6 +1044,6 @@
   "proof": "COMBINATION-PROOF-2026-10-25 (house record)",
   "state": "COMBINED"
  },
- "generated_at": 1793433975,
+ "generated_at": 1793434274,
  "generator": "twin-blockchain-site publish_snapshot.py"
 }
