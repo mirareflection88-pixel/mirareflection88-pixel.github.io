@@ -682,7 +682,7 @@
    "key": "tessera",
    "name": "TESSERA",
    "posture": null,
-   "published_at": 1793374646,
+   "published_at": 1793412627,
    "recent_blocks": [
     {
      "hash": "f53384138fe6e684cdafb19e129b94697ea5bb4e2ae35b37a9d8e68d5a2a388e",
@@ -1044,6 +1044,6 @@
   "proof": "COMBINATION-PROOF-2026-10-25 (house record)",
   "state": "COMBINED"
  },
- "generated_at": 1793411493,
+ "generated_at": 1793413342,
  "generator": "twin-blockchain-site publish_snapshot.py"
 }
