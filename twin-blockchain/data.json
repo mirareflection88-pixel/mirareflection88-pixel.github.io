@@ -61,7 +61,7 @@
    "key": "agora",
    "name": "AGORA",
    "posture": null,
-   "published_at": 1793374647,
+   "published_at": 1793436880,
    "recent_blocks": [
     {
      "hash": "00ed341851cbdb684606f00c5b74fb038fd2296639cbc857c5c87422e1215937",
@@ -1044,6 +1044,6 @@
   "proof": "COMBINATION-PROOF-2026-10-25 (house record)",
   "state": "COMBINED"
  },
- "generated_at": 1793436693,
+ "generated_at": 1793436973,
  "generator": "twin-blockchain-site publish_snapshot.py"
 }
