@@ -231,7 +231,7 @@
    "key": "hub",
    "name": "The Family Hub",
    "posture": null,
-   "published_at": 1793374647,
+   "published_at": 1793419309,
    "recent_blocks": [
     {
      "hash": "dfcde3a5e0d32c66fc56b0413dce84a096b17717e40c0c97f24b35016bd9ddc2",
@@ -1044,6 +1044,6 @@
   "proof": "COMBINATION-PROOF-2026-10-25 (house record)",
   "state": "COMBINED"
  },
- "generated_at": 1793419282,
+ "generated_at": 1793419575,
  "generator": "twin-blockchain-site publish_snapshot.py"
 }
