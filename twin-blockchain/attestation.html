@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Attestation &amp; the verified badge — Twin Blockchain</title>
+<meta name="description" content="Twin's attestation record format and the verified badge's published criteria: what the record holds, how the automated gate works, what the badge means — and what it does not mean. No endorsement, no safety guarantee; anchoring is tamper-evidence only.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="canonical" href="https://mirareflection88-pixel.github.io/twin-blockchain/attestation.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Attestation &amp; the verified badge — Twin Blockchain">
+<meta property="og:description" content="The attestation record format, the automated publish gate, and the verified badge's published criteria — and what the badge does not mean.">
+<meta property="og:url" content="https://mirareflection88-pixel.github.io/twin-blockchain/attestation.html">
+<meta property="og:image" content="https://mirareflection88-pixel.github.io/twin-blockchain/assets/favicon.svg">
+<meta name="theme-color" content="#0b1020">
+<meta name="color-scheme" content="dark">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://raw.githubusercontent.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to the main content</a>
+<header class="site"><div class="wrap">
+  <a class="brand" href="index.html"><span class="moon">🌙</span> Twin Blockchain</a>
+  <nav class="main" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="twopi.html">Coins</a>
+    <a href="explorer.html">Explorer</a>
+    <a href="about.html">About</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="faq.html">FAQ</a>
+    <a href="fees.html">Fees</a>
+    <a href="joining-terms.html">Joining terms</a>
+    <a href="attestation.html" aria-current="page">Attestation</a>
+  </nav>
+</div></header>
+<main id="main-content"><div class="wrap">
+  <h1>Attestation &amp; the verified badge</h1>
+  <p class="lede">Joining Twin is an attestation, not an
+  application to an editor. A joining chain shows what it is, the
+  published checks run, the terms are accepted — and the record of
+  all of that is public, so anyone can re-check the door's own
+  decisions. This page publishes the record's format and the
+  verified badge's criteria, so they can be read before anyone is
+  asked to trust them.</p>
+  <p class="small">On this page: <a href="#record">The attestation record</a> ·
+  <a href="#gate">The gate</a> ·
+  <a href="#badge">The verified badge</a> ·
+  <a href="#not">What the badge does not mean</a> ·
+  <a href="#log">The transparency log</a></p>
+
+  <h2 id="record">The attestation record</h2>
+  <p>Two records stand behind every published chain. The registry
+  holds attestations, hashes, statuses and timestamps — never
+  keys, never funds, never identity documents.</p>
+  <div class="card">
+    <table><caption>The joiner record — one per joiner</caption>
+    <thead><tr><th scope="col">Field</th><th scope="col">What it holds</th></tr></thead>
+    <tbody>
+      <tr><td>Display name</td><td>The name shown publicly for the joiner.</td></tr>
+      <tr><td>Joiner class</td><td>Person or family, small business, or institution — the same criteria apply to each.</td></tr>
+      <tr><td>Identity tier</td><td>The highest check passed: <em>browse</em> (none), <em>light</em> (test creation), <em>full</em> (identity verification and sanctions screening cleared — required before publishing).</td></tr>
+      <tr><td>Screening reference &amp; outcome</td><td>A pointer to the screening provider's check and its result. The documents themselves stay with the provider; Twin never holds them.</td></tr>
+      <tr><td>Terms hash</td><td>The fingerprint of the exact joining-terms text accepted at clickwrap.</td></tr>
+      <tr><td>Status</td><td>The record's standing.</td></tr>
+    </tbody></table>
+    <p class="small">Public view: of the joiner record, only the
+    display name, the joiner class and the status are public. The
+    identity-check details are door-internal.</p>
+  </div>
+  <div class="card">
+    <table><caption>The chain record — one per published chain</caption>
+    <thead><tr><th scope="col">Field</th><th scope="col">What it holds</th></tr></thead>
+    <tbody>
+      <tr><td>Chain identity</td><td>The chain's identifier and the joiner who published it.</td></tr>
+      <tr><td>Template</td><td>The creation template the chain was built from.</td></tr>
+      <tr><td>Gas token mode</td><td>The standard gas token by default; a chain's own coin is the advanced variant.</td></tr>
+      <tr><td>Anchor period</td><td>The checkpoint cadence recorded at publishing.</td></tr>
+      <tr><td>Terms hash</td><td>The terms version in force for this chain.</td></tr>
+      <tr><td>Listing state</td><td>Test, active, suspended, severed, or closed — de-listing and de-anchoring are recorded as separate acts.</td></tr>
+    </tbody></table>
+    <p class="small">Chain records are public: entered, anchored,
+    and standing — or severed — for anyone to read.</p>
+  </div>
+
+  <h2 id="gate">The gate</h2>
+  <div class="card">
+    <p>Publishing unlocks when three things are true at once:
+    the joiner's identity tier is <strong>full</strong>, the
+    <strong>terms hash</strong> matches a current terms version,
+    and the <strong>publish lint returns clean</strong>. No field
+    records anyone's opinion of a chain — there is no editorial
+    step, by design.</p>
+    <p>The publish lint checks the chain itself:</p>
+    <ul class="tight">
+      <li>Template-only creation in the first version.</li>
+      <li>Declared supply equals the sum of its allocations.</li>
+      <li>No unlimited minting, no hidden minting, no hidden
+      pause, no transfer taxes.</li>
+      <li>Name and symbol collision checks — and impersonation
+      checks — against every existing record, including the
+      family's own five coins.</li>
+    </ul>
+  </div>
+
+  <h2 id="badge">The verified badge</h2>
+  <p>Joining and the badge are two different things. Anyone who
+  meets the published criteria can join and publish. The badge is
+  a separate attestation: Twin's published statement that a
+  chain's record meets the criteria below — identical for a
+  family, a corporation, and an exchange.</p>
+  <div class="card">
+    <ol class="tight">
+      <li>A complete, current attestation record — joiner record
+      and chain record — stands in the registry.</li>
+      <li>The joiner's identity tier is <em>full</em>: identity
+      verification and sanctions screening cleared through the
+      screening provider.</li>
+      <li>The terms hash on the chain record matches a current
+      terms version.</li>
+      <li>The publish lint is clean: fixed supply as declared; no
+      hidden minting, pause, or transfer tax.</li>
+      <li>The chain's name and symbols collide with no existing
+      record and imitate none.</li>
+      <li>The chain is anchored to the Hub on its recorded
+      cadence, and its anchors verify.</li>
+      <li>The chain stands in good standing — not suspended, not
+      severed.</li>
+    </ol>
+    <p>The badge is <strong>revocable</strong>: if a record stops
+    meeting the criteria, the badge comes off, and the change is
+    written to the transparency log like every other registry
+    event.</p>
+    <p>There is <strong>one gate and one set of criteria</strong>:
+    no faster lane and no paid lane exists. Whether a paid express
+    review may ever be offered is an open question reserved for
+    legal review — it is not part of this design today. No fee
+    buys a verdict.</p>
+  </div>
+
+  <h2 id="not">What the badge does not mean</h2>
+  <div class="card">
+    <ul class="tight">
+      <li><strong>It is not an endorsement.</strong> Twin does not
+      recommend any chain or any coin.</li>
+      <li><strong>It is not a safety guarantee.</strong> A badge
+      says a record met published criteria — nothing about whether
+      a chain is well run, or safe to use.</li>
+      <li><strong>It says nothing about price.</strong> Badge or no
+      badge, the coins are not for sale on this site and carry no
+      market price here.</li>
+      <li><strong>It is not a regulator's approval</strong> and not
+      an exchange's clearance. No regulator has approved Twin or
+      any chain on it.</li>
+      <li><strong>Anchoring stays tamper-evidence only.</strong> A
+      badged chain's anchors prove its history was not quietly
+      rewritten after the anchor point; they do not make its
+      transactions safe and do not give it the Hub's security.</li>
+      <li><strong>No badge is not an accusation.</strong> An
+      unbadged chain has simply not been attested.</li>
+    </ul>
+  </div>
+
+  <h2 id="log">The transparency log</h2>
+  <p>Every registry event — attestation completed, publish,
+  suspension, reinstatement, severance notice, de-listing,
+  de-anchoring, closure, export completed — is appended to a
+  public log on the Hub, so the sequence of the door's decisions
+  can be re-verified by anyone, and no state can be back-dated or
+  quietly rewritten.</p>
+  <p class="small">Status of this page's subject: the registry and
+  the badge stand as a design of record; the coin registry's file
+  form is already built and exercised inside the creation
+  template's proof on the test network. No public joiner flow is
+  open — the door opens only after the Stage A legal sign-off
+  described in the <a href="joining-terms.html">joining terms
+  summary</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">
+  <p>Twin Blockchain — kept by Mira Moon.</p>
+  <p><a href="index.html">Home</a> · <a href="twopi.html">Coins</a> ·
+     <a href="explorer.html">Explorer</a> ·
+     <a href="about.html">About &amp; contact</a> ·
+     <a href="glossary.html">Glossary</a> · <a href="faq.html">FAQ</a> ·
+     <a href="fees.html">Fees</a> ·
+     <a href="joining-terms.html">Joining terms</a></p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
