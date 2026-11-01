@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Glossary — Twin Blockchain</title>
-<meta name="description" content="The Twin Blockchain's words in plain language: block, hash, height, validator, anchor, hub, snapshot and supply — explained for a first-time visitor.">
+<meta name="description" content="Every word the Twin Blockchain site uses, in plain language — block, chain, hash, height, validator, anchor, hub, snapshot, supply, fee, wallet and more — explained for a first-time visitor.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="canonical" href="https://mirareflection88-pixel.github.io/twin-blockchain/glossary.html">
 <meta property="og:type" content="website">
@@ -29,19 +29,22 @@
     <a href="twopi.html">Coins</a>
     <a href="explorer.html">Explorer</a>
     <a href="about.html">About</a>
-    <a href="glossary.html">Glossary</a>
+    <a href="glossary.html" aria-current="page">Glossary</a>
+    <a href="faq.html">FAQ</a>
   </nav>
 </div></header>
 <main id="main-content"><div class="wrap">
   <h1>The words, in plain language</h1>
   <p class="lede">This site uses a handful of blockchain words. Here is
   each one in ordinary English — no prior knowledge assumed.</p>
-  <p class="small" id="glossary-index">Jump to a word: <a href="#block">Block</a> · <a href="#hash">Hash</a> · <a href="#height">Height</a> · <a href="#validator">Validator</a> · <a href="#anchor">Anchor</a> · <a href="#hub">Hub</a> · <a href="#spoke">Coin chain</a> · <a href="#snapshot">Snapshot</a> · <a href="#supply">Supply</a> · <a href="#ledger">Ledger</a> · <a href="#transaction">Transaction</a> · <a href="#genesis">First block</a> · <a href="#combination">Combination</a> · <a href="#block-time">Block time</a> · <a href="#burn">Burn</a> · <a href="#emission">Emission</a> · <a href="#fee">Fee</a> · <a href="#address">Address</a> · <a href="#wallet">Wallet</a> · <a href="#public-record">Public record</a> · <a href="#publisher">Publisher</a> · <a href="#node">Node</a> · <a href="#tip">Tip</a> · <a href="#explorer">Explorer</a></p>
+  <p class="small" id="glossary-index">Jump to a word: <a href="#block">Block</a> · <a href="#chain">Chain</a> · <a href="#hash">Hash</a> · <a href="#height">Height</a> · <a href="#validator">Validator</a> · <a href="#anchor">Anchor</a> · <a href="#hub">Hub</a> · <a href="#spoke">Coin chain</a> · <a href="#snapshot">Snapshot</a> · <a href="#supply">Supply</a> · <a href="#ledger">Ledger</a> · <a href="#transaction">Transaction</a> · <a href="#genesis">First block</a> · <a href="#combination">Combination</a> · <a href="#block-time">Block time</a> · <a href="#burn">Burn</a> · <a href="#emission">Emission</a> · <a href="#fee">Fee</a> · <a href="#address">Address</a> · <a href="#wallet">Wallet</a> · <a href="#public-record">Public record</a> · <a href="#publisher">Publisher</a> · <a href="#node">Node</a> · <a href="#tip">Tip</a> · <a href="#shard">Shard</a> · <a href="#stale">Stale</a> · <a href="#explorer">Explorer</a></p>
 
   <dl class="glossary">
     <dt id="block">Block</dt>
     <dd>One sealed page of a chain's ledger. Each block records what
     happened in its moment, and once sealed it is not rewritten.</dd>
+    <dt id="chain">Chain</dt>
+    <dd>One blockchain in the family — a single ledger that keeps producing blocks in order. This family has five chains: the four coin chains and the hub that ties them together.</dd>
     <dt id="hash">Hash (fingerprint)</dt>
     <dd>A short string of characters made from everything in a block.
     Change one letter anywhere in the block and the fingerprint no
@@ -109,6 +112,10 @@
     <dd>One running copy of a chain's program, keeping its ledger and producing or checking its blocks. This site does not connect to a node directly; it reads the published snapshot the publisher posts.</dd>
     <dt id="tip">Tip (newest block)</dt>
     <dd>The most recent block a chain has produced — the top of its ledger right now. A coin page shows its tip's time and fingerprint in the live panel.</dd>
+    <dt id="shard">Shard (one chain's file)</dt>
+    <dd>One chain's slice of the published block index, kept as its own file so an update only has to move the chain that changed. The explorer reads all five shards and searches them as one record.</dd>
+    <dt id="stale">Stale (out of date)</dt>
+    <dd>What this site calls data whose update is late. When a snapshot is older than usual, the page says so in a plain warning and shows the last published numbers with their times — stale numbers are never dressed up as live.</dd>
     <dt id="explorer">Explorer</dt>
     <dd>This site's search tool: it lets anyone look up any block by
     its number (height) or its fingerprint (hash), and check the
@@ -121,9 +128,9 @@
 </div></main>
 <footer class="site"><div class="wrap">
   <p>Twin Blockchain — kept by Mira Moon.</p>
-  <p><a href="index.html">Home</a> · <a href="explorer.html">Explorer</a> ·
+  <p><a href="index.html">Home</a> · <a href="twopi.html">Coins</a> · <a href="explorer.html">Explorer</a> ·
      <a href="about.html">About &amp; contact</a> ·
-     <a href="glossary.html">Glossary</a></p>
+     <a href="glossary.html">Glossary</a> · <a href="faq.html">FAQ</a></p>
 </div></footer>
 </body>
 </html>
