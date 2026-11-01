@@ -71,8 +71,8 @@
     AGORA or TESSERA. Each keeps its own ledger and its own blocks.</dd>
     <dt id="snapshot">Snapshot</dt>
     <dd>The published copy of the chains' own records that this site
-    reads. A small publisher posts a fresh snapshot about every five
-    minutes, and every page shows the snapshot's time, so you always
+    shows. The records are refreshed about every five minutes, and
+    every page shows when they were published, so you always
     know how current the numbers in front of you are.</dd>
     <dt id="supply">Supply / cap</dt>
     <dd>How much of a coin exists in total. For every coin in this
@@ -102,7 +102,7 @@
     <dt id="emission">Emission</dt>
     <dd>Coins released slowly over time by design. AGORA is the family's only emitting coin: its rewards account pays out a small amount with every block, and the total never passes its fixed cap.</dd>
     <dt id="public-record">Public record</dt>
-    <dd>The published snapshot and block index anyone can fetch and check — the same files this site reads. If this page and the public record ever disagreed, the record would win and the page would be corrected.</dd>
+    <dd>The chains' published records — their heights, blocks and balances — which anyone can fetch and check for themselves, and which are the same records this site shows. If this page and the public record ever disagreed, the record would win and the page would be corrected.</dd>
     <dt id="fee">Fee</dt>
     <dd>The small charge a chain collects for recording an action, such as an anchor submission. In this family, fees are burned — permanently removed from circulation — rather than paid out. Looking at this site costs nothing: there is no fee for reading the public record.</dd>
     <dt id="address">Address</dt>
@@ -110,13 +110,13 @@
     <dt id="wallet">Wallet</dt>
     <dd>A tool that holds the keys to an account and signs actions for it. This site is not a wallet: it holds no keys, takes no signatures, and cannot move any coin.</dd>
     <dt id="publisher">Publisher</dt>
-    <dd>The small house program that reads the chains' own records and posts a fresh snapshot to this site about every five minutes. It only ever reads and publishes — it cannot change a chain.</dd>
+    <dd>How the chains' own records reach this site: they are read from the chains and posted here about every five minutes. Publishing only ever reads and shows — it cannot change a chain.</dd>
     <dt id="node">Node</dt>
-    <dd>One running copy of a chain's program, keeping its ledger and producing or checking its blocks. This site does not connect to a node directly; it reads the published snapshot the publisher posts.</dd>
+    <dd>One running copy of a chain's program, keeping its ledger and producing or checking its blocks. You do not need to run or connect to one to check this family — this site publishes the chains' records for anyone to read.</dd>
     <dt id="tip">Tip (newest block)</dt>
     <dd>The most recent block a chain has produced — the top of its ledger right now. A coin page shows its tip's time and fingerprint in the live panel.</dd>
-    <dt id="shard">Shard (one chain's file)</dt>
-    <dd>One chain's slice of the published block index, kept as its own file so an update only has to move the chain that changed. The explorer reads all five shards and searches them as one record.</dd>
+    <dt id="shard">Shard (one chain's part)</dt>
+    <dd>One chain's part of the family's published block record. The explorer brings all five chains' parts together and searches them as one record, so a lookup never has to care which chain a block belongs to.</dd>
     <dt id="stale">Stale (out of date)</dt>
     <dd>What this site calls data whose update is late. When a snapshot is older than usual, the page says so in a plain warning and shows the last published numbers with their times — stale numbers are never dressed up as live.</dd>
     <dt id="explorer">Explorer</dt>
