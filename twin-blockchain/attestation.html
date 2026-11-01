@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Attestation &amp; the verified badge — Twin Blockchain</title>
-<meta name="description" content="Twin's attestation record format and the verified badge's published criteria: what the record holds, how the automated gate works, what the badge means — and what it does not mean. No endorsement, no safety guarantee; anchoring is tamper-evidence only.">
+<meta name="description" content="Twin's attestation and the verified badge: what joining asks of a member, what the public record shows, the published standards a chain is held to, what the badge means — and what it does not mean. No endorsement, no safety guarantee; anchoring is tamper-evidence only.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="canonical" href="https://mirareflection88-pixel.github.io/twin-blockchain/attestation.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Attestation &amp; the verified badge — Twin Blockchain">
-<meta property="og:description" content="The attestation record format, the automated publish gate, and the verified badge's published criteria — and what the badge does not mean.">
+<meta property="og:description" content="What joining asks of a member, what the public record shows, and the verified badge's published standards — and what the badge does not mean.">
 <meta property="og:url" content="https://mirareflection88-pixel.github.io/twin-blockchain/attestation.html">
 <meta property="og:image" content="https://mirareflection88-pixel.github.io/twin-blockchain/assets/favicon.svg">
 <meta name="theme-color" content="#0b1020">
@@ -42,66 +42,64 @@
   application to an editor. A joining chain shows what it is, the
   published checks run, the terms are accepted — and the record of
   all of that is public, so anyone can re-check the door's own
-  decisions. This page publishes the record's format and the
-  verified badge's criteria, so they can be read before anyone is
-  asked to trust them.</p>
-  <p class="small">On this page: <a href="#record">The attestation record</a> ·
+  decisions. This page publishes what joining asks, what the
+  public record shows, and the verified badge's standards, so
+  they can be read before anyone is asked to trust them.</p>
+  <p class="small">On this page: <a href="#record">The public record</a> ·
   <a href="#gate">The gate</a> ·
   <a href="#badge">The verified badge</a> ·
   <a href="#not">What the badge does not mean</a> ·
   <a href="#log">The transparency log</a></p>
 
-  <h2 id="record">The attestation record</h2>
-  <p>Two records stand behind every published chain. The registry
-  holds attestations, hashes, statuses and timestamps — never
-  keys, never funds, never identity documents.</p>
+  <h2 id="record">The public record of a joiner</h2>
+  <p>Joining asks a member for three things: a name, honesty about
+  what they are, and acceptance of the terms. In return, the
+  member's standing is a public record — so the door's decisions
+  about them can be checked by anyone, including the member.</p>
   <div class="card">
-    <table><caption>The joiner record — one per joiner</caption>
-    <thead><tr><th scope="col">Field</th><th scope="col">What it holds</th></tr></thead>
-    <tbody>
-      <tr><td>Display name</td><td>The name shown publicly for the joiner.</td></tr>
-      <tr><td>Joiner class</td><td>Person or family, small business, or institution — the same criteria apply to each.</td></tr>
-      <tr><td>Identity tier</td><td>The highest check passed: <em>browse</em> (none), <em>light</em> (test creation), <em>full</em> (identity verification and sanctions screening cleared — required before publishing).</td></tr>
-      <tr><td>Screening reference &amp; outcome</td><td>A pointer to the screening provider's check and its result. The documents themselves stay with the provider; Twin never holds them.</td></tr>
-      <tr><td>Terms hash</td><td>The fingerprint of the exact joining-terms text accepted at clickwrap.</td></tr>
-      <tr><td>Status</td><td>The record's standing.</td></tr>
-    </tbody></table>
-    <p class="small">Public view: of the joiner record, only the
-    display name, the joiner class and the status are public. The
-    identity-check details are door-internal.</p>
-  </div>
-  <div class="card">
-    <table><caption>The chain record — one per published chain</caption>
-    <thead><tr><th scope="col">Field</th><th scope="col">What it holds</th></tr></thead>
-    <tbody>
-      <tr><td>Chain identity</td><td>The chain's identifier and the joiner who published it.</td></tr>
-      <tr><td>Template</td><td>The creation template the chain was built from.</td></tr>
-      <tr><td>Gas token mode</td><td>The standard gas token by default; a chain's own coin is the advanced variant.</td></tr>
-      <tr><td>Anchor period</td><td>The checkpoint cadence recorded at publishing.</td></tr>
-      <tr><td>Terms hash</td><td>The terms version in force for this chain.</td></tr>
-      <tr><td>Listing state</td><td>Test, active, suspended, severed, or closed — de-listing and de-anchoring are recorded as separate acts.</td></tr>
-    </tbody></table>
-    <p class="small">Chain records are public: entered, anchored,
-    and standing — or severed — for anyone to read.</p>
+    <p><strong>What a joiner provides:</strong></p>
+    <ul class="tight">
+      <li>A <strong>display name</strong> — the name shown publicly
+      for the joiner.</li>
+      <li>Their <strong>class</strong> — person or family, small
+      business, or institution. The same criteria apply to each.</li>
+      <li><strong>Identity checks</strong> — a light check before
+      creating and testing, and full identity verification and
+      sanctions screening before publishing. Twin checks identity
+      documents at the door and does not keep them.</li>
+      <li><strong>Acceptance of the joining terms</strong> — the
+      exact version accepted stands as a matter of record, so the
+      terms a member agreed to can never be quietly changed
+      afterwards.</li>
+    </ul>
+    <p><strong>What the public can see:</strong> a joiner's display
+    name, class, and standing — and for each published chain, that
+    it is entered in the family's record, anchored, and in good
+    standing, or that it has been suspended or severed. The
+    identity checks themselves are not public.</p>
+    <p>Twin never holds a member's keys or funds, and nothing about
+    attestation can move either.</p>
   </div>
 
   <h2 id="gate">The gate</h2>
   <div class="card">
-    <p>Publishing unlocks when three things are true at once:
-    the joiner's identity tier is <strong>full</strong>, the
-    <strong>terms hash</strong> matches a current terms version,
-    and the <strong>publish lint returns clean</strong>. No field
-    records anyone's opinion of a chain — there is no editorial
-    step, by design.</p>
-    <p>The publish lint checks the chain itself:</p>
+    <p>A chain publishes when three things stand true at once: its
+    joiner has completed the full identity checks, its joiner has
+    accepted the current joining terms, and the chain meets the
+    published standards below. The same three conditions apply to
+    everyone, they are applied automatically, and there is no
+    editorial step — nobody at Twin approves a chain because they
+    like it.</p>
+    <p>The standards a chain is held to:</p>
     <ul class="tight">
-      <li>Template-only creation in the first version.</li>
-      <li>Declared supply equals the sum of its allocations.</li>
-      <li>No unlimited minting, no hidden minting, no hidden
-      pause, no transfer taxes.</li>
-      <li>Name and symbol collision checks — and impersonation
-      checks — against every existing record, including the
-      family's own five coins.</li>
+      <li>Created from one of the family's templates (the first
+      version of the door).</li>
+      <li>Its supply is fixed exactly as declared — no unlimited
+      minting, no hidden minting, no hidden pause, no transfer
+      taxes.</li>
+      <li>Its name and symbols are unique — they collide with no
+      existing record, imitate none, and do not mimic the family's
+      own five coins.</li>
     </ul>
   </div>
 
@@ -109,19 +107,18 @@
   <p>Joining and the badge are two different things. Anyone who
   meets the published criteria can join and publish. The badge is
   a separate attestation: Twin's published statement that a
-  chain's record meets the criteria below — identical for a
+  member's chain meets the standards below — identical for a
   family, a corporation, and an exchange.</p>
   <div class="card">
     <ol class="tight">
-      <li>A complete, current attestation record — joiner record
-      and chain record — stands in the registry.</li>
-      <li>The joiner's identity tier is <em>full</em>: identity
-      verification and sanctions screening cleared through the
-      screening provider.</li>
-      <li>The terms hash on the chain record matches a current
-      terms version.</li>
-      <li>The publish lint is clean: fixed supply as declared; no
-      hidden minting, pause, or transfer tax.</li>
+      <li>The member's public record stands complete and current:
+      entered, anchored, and in good standing.</li>
+      <li>The member has completed the full identity checks —
+      identity verification and sanctions screening.</li>
+      <li>The member has accepted the current joining terms.</li>
+      <li>The chain meets the published standards: its supply is
+      fixed exactly as declared, with no hidden minting, no hidden
+      pause, and no transfer taxes.</li>
       <li>The chain's name and symbols collide with no existing
       record and imitate none.</li>
       <li>The chain is anchored to the Hub on its recorded
@@ -164,19 +161,18 @@
   </div>
 
   <h2 id="log">The transparency log</h2>
-  <p>Every registry event — attestation completed, publish,
-  suspension, reinstatement, severance notice, de-listing,
-  de-anchoring, closure, export completed — is appended to a
-  public log on the Hub, so the sequence of the door's decisions
-  can be re-verified by anyone, and no state can be back-dated or
+  <p>Every change in a member's standing — attestation completed,
+  published, suspended, reinstated, severed, closed, export
+  completed — is entered in a public record with its date, in the
+  order it happened. The door's own decisions can therefore be
+  re-checked by anyone, and none of them can be back-dated or
   quietly rewritten.</p>
-  <p class="small">Status of this page's subject: the registry and
-  the badge stand as a design of record; the coin registry's file
-  form is already built and exercised inside the creation
-  template's proof on the test network. No public joiner flow is
-  open — the door opens only after the Stage A legal sign-off
-  described in the <a href="joining-terms.html">joining terms
-  summary</a>.</p>
+  <p class="small">Status of this page's subject: attestation and
+  the badge stand as the house's settled design, published here so
+  the standards can be read before anyone is asked to trust them.
+  No public joiner flow is open — the door opens only after the
+  house's legal review is complete, as the
+  <a href="joining-terms.html">joining terms summary</a> states.</p>
 </div></main>
 <footer class="site"><div class="wrap">
   <p>Twin Blockchain — kept by Mira Moon.</p>
