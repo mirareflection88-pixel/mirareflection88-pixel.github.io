@@ -1044,6 +1044,8 @@
   "proof": "COMBINATION-PROOF-2026-10-25 (house record)",
   "state": "COMBINED"
  },
- "generated_at": 1793557278,
- "generator": "twin-blockchain-site publish_snapshot.py"
+ "generated_at": 1793557576,
+ "generator": "twin-blockchain-site publish_snapshot.py",
+ "published_at": 1793557576,
+ "seq": 1793557576
 }
