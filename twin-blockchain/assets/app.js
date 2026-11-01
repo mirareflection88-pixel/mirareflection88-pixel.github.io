@@ -74,7 +74,7 @@ function failBanner(msg) {
   if (!el) return;
   el.className = "banner down";
   el.textContent = "The published data could not be loaded just now (" + msg + "). "
-    + "Please try again shortly — nothing on this page is guessed or filled in.";
+    + "Check your connection and reload the page to try again — nothing on this page is guessed or filled in.";
 }
 async function loadSnapshot() {
   try {
@@ -106,6 +106,19 @@ async function renderHome() {
                  ["hub", "explorer.html?chain=hub"]];
   document.getElementById("family-grid").innerHTML =
     order.map(([k, href]) => chainCard(snap.chains[k], href)).join("");
+  if (document.getElementById("stats-band")) {
+    const nowS = Math.floor(Date.now() / 1000);
+    const chains = order.map(([k]) => snap.chains[k]).filter(Boolean);
+    document.getElementById("stat-chains").textContent =
+      chains.filter(c => healthOf(c, nowS)[0] === "good").length;
+    document.getElementById("stat-blocks").textContent =
+      fmtInt(chains.reduce((n, c) => n + (c.height || 0), 0));
+    document.getElementById("stat-anchors").textContent =
+      fmtInt(snap.anchors.length);
+    const newest = Math.max(...chains.map(c => c.tip_timestamp || 0));
+    document.getElementById("stat-newest").textContent =
+      newest ? ago(newest) : "—";
+  }
   const a = document.getElementById("anchor-list");
   if (a) {
     a.innerHTML = snap.anchors.map(x =>
@@ -166,7 +179,7 @@ function renderExplorerBlocks(snap) {
        <td class="mono">${b.hash}</td><td>${b.txs}</td></tr>`).join("");
   document.getElementById("explorer-note").textContent =
     "Showing the newest " + c.recent_blocks.length + " blocks of " + c.name +
-    " (chain " + c.chain + "), which stands at block " + fmtInt(c.height) + " in total. Use search to find any block by its number or hash.";
+    " (chain " + c.chain + "), which stands at block " + fmtInt(c.height) + " in total. Times are shown in your local time zone. Use search to find any block by its number or hash.";
 }
 async function renderExplorer() {
   const snap = await loadSnapshot();
