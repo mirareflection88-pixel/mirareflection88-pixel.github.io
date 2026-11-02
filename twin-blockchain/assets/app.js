@@ -235,7 +235,7 @@ async function renderExplorer() {
         number or hash and try again.</div>`;
       return;
     }
-    out.innerHTML = `<p class="small" role="status">Found ${hits.length} block${hits.length === 1 ? "" : "s"} matching your search — searched ${Object.values(blocksIndex).reduce((n, a) => n + a.length, 0).toLocaleString("en-US")} blocks in the published record across the family.</p><table><caption>Blocks matching your search</caption><thead><tr><th scope="col">Chain</th><th scope="col">Block</th><th scope="col">Time</th><th scope="col">Hash</th></tr></thead>
+    out.innerHTML = `<p class="small" role="status">Found ${hits.length} block${hits.length === 1 ? "" : "s"} matching your search${hits.length >= 20 ? " — showing the first 20 matches; a longer hash paste narrows the search" : ""} — searched ${Object.values(blocksIndex).reduce((n, a) => n + a.length, 0).toLocaleString("en-US")} blocks in the published record across the family.</p><table><caption>Blocks matching your search</caption><thead><tr><th scope="col">Chain</th><th scope="col">Block</th><th scope="col">Time</th><th scope="col">Hash</th></tr></thead>
       <tbody>${hits.map(x => `<tr><td>${x.key.toUpperCase()}</td><td>${fmtInt(x.h)}</td>
         <td>${fmtTime(x.ts)}</td><td class="mono">${x.hash}</td></tr>`).join("")}</tbody></table>`;
   });
