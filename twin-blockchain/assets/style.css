@@ -76,6 +76,7 @@ form.search input{flex:1 1 260px;background:var(--bg2);border:1px solid var(--li
   .coin-card .height{font-size:1.45rem}}
 dl.glossary dt{font-weight:700;margin-top:1em;color:var(--gold)}
 dl.glossary dt:target{background:#1b2340;outline:1px solid var(--gold);outline-offset:4px}
+h2:target,h3:target{background:#1b2340;outline:1px solid var(--gold);outline-offset:4px}
 dl.glossary dd{margin:.2em 0 0;color:var(--dim);max-width:44em}
 .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:#1a1405;padding:10px 16px;z-index:20;font-weight:700}
 .skip-link:focus{left:8px;top:8px}
