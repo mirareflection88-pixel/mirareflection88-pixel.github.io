@@ -231,7 +231,7 @@ async function renderExplorer() {
         The search checked ${Object.values(blocksIndex).reduce((n, a) => n + a.length, 0).toLocaleString("en-US")} blocks in the published record of all five chains
         (TWOPI, KEEL, AGORA, TESSERA and the hub). A block number must be a whole
         number a chain has actually reached; a hash search matches the start of a
-        block's fingerprint, so a longer paste is a stricter check. Check the
+        block's fingerprint, so a longer paste is a stricter check. If you pasted an account address, those are not searched here — each coin page lists its founding accounts. Check the
         number or hash and try again.</div>`;
       return;
     }
