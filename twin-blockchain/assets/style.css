@@ -74,6 +74,8 @@ form.search input{flex:1 1 260px;background:var(--bg2);border:1px solid var(--li
 .tabs a.btn[aria-current="page"]{background:var(--teal);color:#07231d;border-color:var(--teal)}
 @media(max-width:640px){.health-label{font-size:.88rem;line-height:1.35;display:inline-block}
   .coin-card .height{font-size:1.45rem}}
+#glossary-index{line-height:2}
+#glossary-index a{display:inline-block;padding:0 2px}
 dl.glossary dt{font-weight:700;margin-top:1em;color:var(--gold)}
 dl.glossary dt:target{background:#1b2340;outline:1px solid var(--gold);outline-offset:4px}
 h2:target,h3:target{background:#1b2340;outline:1px solid var(--gold);outline-offset:4px}
