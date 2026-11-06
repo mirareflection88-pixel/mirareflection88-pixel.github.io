@@ -96,5 +96,5 @@ footer.site a{color:var(--dim)}
 ul.tight{margin:.4em 0;padding-left:1.2em}
 ul.tight li{margin:.25em 0}
 ::selection{background:#e8c476;color:#1a1405}
-.example-search,#clear-search{background:var(--bg2);color:var(--teal);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font:inherit;font-size:.9rem;cursor:pointer}
+.example-search,#clear-search{background:var(--bg2);color:var(--teal);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font:inherit;font-size:.9rem;cursor:pointer;min-height:44px;display:inline-flex;align-items:center}
 .example-search:hover,#clear-search:hover{border-color:var(--teal)}
