@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Glossary — Twin Blockchain</title>
-<meta name="description" content="Every word the Twin Blockchain site uses, in plain language — block, chain, hash, height, validator, anchor, hub, snapshot, supply, fee, wallet, personal blockchain, fusion, attestation, the test and main networks, keys, seed phrases, the verified badge, templates, accounts, balances, rewards, vaults, transfers, base units, hosting, exports and more — explained for a first-time visitor.">
+<meta name="description" content="Every word the Twin Blockchain site uses, in plain language — block, chain, hash, height, validator, anchor, hub, snapshot, supply, fee, wallet, personal blockchain, fusion, attestation, the test and main networks, keys, seed phrases, the verified badge, templates, accounts, balances, rewards, vaults, transfers, base units, hosting, exports, severance, checkpoints, the registry, minting and more — explained for a first-time visitor.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Twin Blockchain","item":"https://mirareflection88-pixel.github.io/twin-blockchain/"},{"@type":"ListItem","position":2,"name":"Glossary","item":"https://mirareflection88-pixel.github.io/twin-blockchain/glossary.html"}]}</script>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="canonical" href="https://mirareflection88-pixel.github.io/twin-blockchain/glossary.html">
@@ -41,7 +41,7 @@
   <h1>The words, in plain language</h1>
   <p class="lede">This site uses a handful of blockchain words. Here is
   each one in ordinary English — no prior knowledge assumed.</p>
-  <p class="small" id="glossary-index">Jump to a word: <a href="#block">Block</a> · <a href="#chain">Chain</a> · <a href="#hash">Hash</a> · <a href="#height">Height</a> · <a href="#validator">Validator</a> · <a href="#anchor">Anchor</a> · <a href="#hub">Hub</a> · <a href="#spoke">Coin chain</a> · <a href="#snapshot">Snapshot</a> · <a href="#supply">Supply</a> · <a href="#ledger">Ledger</a> · <a href="#transaction">Transaction</a> · <a href="#genesis">First block</a> · <a href="#combination">Combination</a> · <a href="#personal-blockchain">Personal blockchain</a> · <a href="#fusion">Fusion</a> · <a href="#attestation">Attestation</a> · <a href="#test-network">Test network</a> · <a href="#main-network">Main network</a> · <a href="#non-custodial">Non-custodial</a> · <a href="#key">Key</a> · <a href="#seed-phrase">Seed phrase</a> · <a href="#verified-badge">Verified badge</a> · <a href="#template">Template</a> · <a href="#account">Account</a> · <a href="#balance">Balance</a> · <a href="#reward">Reward</a> · <a href="#vault">Vault</a> · <a href="#transfer">Transfer</a> · <a href="#base-unit">Base unit</a> · <a href="#hosting">Hosting</a> · <a href="#export">Export</a> · <a href="#block-time">Block time</a> · <a href="#burn">Burn</a> · <a href="#emission">Emission</a> · <a href="#fee">Fee</a> · <a href="#address">Address</a> · <a href="#wallet">Wallet</a> · <a href="#public-record">Public record</a> · <a href="#publisher">Publisher</a> · <a href="#node">Node</a> · <a href="#tip">Tip</a> · <a href="#shard">Shard</a> · <a href="#stale">Stale</a> · <a href="#explorer">Explorer</a></p>
+  <p class="small" id="glossary-index">Jump to a word: <a href="#block">Block</a> · <a href="#chain">Chain</a> · <a href="#hash">Hash</a> · <a href="#height">Height</a> · <a href="#validator">Validator</a> · <a href="#anchor">Anchor</a> · <a href="#hub">Hub</a> · <a href="#spoke">Coin chain</a> · <a href="#snapshot">Snapshot</a> · <a href="#supply">Supply</a> · <a href="#ledger">Ledger</a> · <a href="#transaction">Transaction</a> · <a href="#genesis">First block</a> · <a href="#combination">Combination</a> · <a href="#personal-blockchain">Personal blockchain</a> · <a href="#fusion">Fusion</a> · <a href="#attestation">Attestation</a> · <a href="#test-network">Test network</a> · <a href="#main-network">Main network</a> · <a href="#non-custodial">Non-custodial</a> · <a href="#key">Key</a> · <a href="#seed-phrase">Seed phrase</a> · <a href="#verified-badge">Verified badge</a> · <a href="#template">Template</a> · <a href="#account">Account</a> · <a href="#balance">Balance</a> · <a href="#reward">Reward</a> · <a href="#vault">Vault</a> · <a href="#transfer">Transfer</a> · <a href="#base-unit">Base unit</a> · <a href="#hosting">Hosting</a> · <a href="#export">Export</a> · <a href="#severance">Severance</a> · <a href="#checkpoint">Checkpoint</a> · <a href="#registry">Registry</a> · <a href="#minting">Minting</a> · <a href="#block-time">Block time</a> · <a href="#burn">Burn</a> · <a href="#emission">Emission</a> · <a href="#fee">Fee</a> · <a href="#address">Address</a> · <a href="#wallet">Wallet</a> · <a href="#public-record">Public record</a> · <a href="#publisher">Publisher</a> · <a href="#node">Node</a> · <a href="#tip">Tip</a> · <a href="#shard">Shard</a> · <a href="#stale">Stale</a> · <a href="#explorer">Explorer</a></p>
 
   <dl class="glossary">
     <dt id="block">Block</dt>
@@ -195,6 +195,31 @@
     an export window of at least 30 days before any severance
     for cause takes effect, and Twin never deletes your data
     or your keys.</dd>
+    <dt id="severance">Severance</dt>
+    <dd>How Twin ends a member chain’s standing when it
+    breaks the terms: de-listing and de-anchoring only. A
+    severed chain keeps existing — Twin disowns it; Twin
+    cannot delete it — and before a severance for cause
+    takes effect the member gets notice and the guaranteed
+    <a href="#export">export</a> window.</dd>
+    <dt id="checkpoint">Checkpoint</dt>
+    <dd>A hosted chain’s written record of its state at a
+    moment, anchored into the hub. Checkpoints give a chain
+    tamper-evidence, ordering proof and a public heartbeat;
+    once anchored, a checkpoint is never removed, even
+    after a <a href="#severance">severance</a>.</dd>
+    <dt id="registry">Registry</dt>
+    <dd>Twin’s public list of its member chains and their
+    standing — entered, anchored, in good standing, or
+    severed. Every change of standing is entered in the
+    public record with its date, so the door’s own
+    decisions can be re-checked by anyone.</dd>
+    <dt id="minting">Minting</dt>
+    <dd>Making new coins. In this family every coin’s
+    <a href="#supply">supply</a> was fixed when its chain
+    was created and no more can ever be made; a joining
+    chain is held to the same rule — no unlimited minting
+    and no hidden minting past what it declared.</dd>
     <dt id="block-time">Block time</dt>
     <dd>The moment a block was sealed, as recorded in the block itself. Times on this site are shown in your local timezone with the zone named.</dd>
     <dt id="burn">Burn</dt>
@@ -225,7 +250,7 @@
     family's record for themselves.</dd>
   </dl>
 
-  <p class="small">This page was last reviewed on November 5, 2026,
+  <p class="small">This page was last reviewed on November 6, 2026,
   against the words the site itself uses.</p>
 
   <div class="notice"><strong>Still unsure?</strong> The
