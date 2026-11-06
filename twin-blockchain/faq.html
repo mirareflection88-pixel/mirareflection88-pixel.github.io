@@ -161,6 +161,16 @@
   endorsement. The <a href="attestation.html">attestation
   page</a> states the same limits for the verified badge.</p>
 
+  <h3>What is a <a href="glossary.html#checkpoint">checkpoint</a>?</h3>
+  <p>A written record of a hosted chain’s state at a moment,
+  anchored into the Hub. A checkpoint gives the chain
+  tamper-evidence — a later rewrite of its history would
+  show against it — proof of the order its checkpoints
+  stand in, and a public heartbeat: evidence the chain is
+  alive and reporting. Checkpoints, once anchored, are
+  never removed, even after a severance — and a checkpoint
+  does not give a chain the Hub’s security.</p>
+
   <h3>What is Fusion?</h3>
   <p>Fusion is Twin's door for joining. It is how other blockchains
   and projects get access to join the Twin ecosystem — on
@@ -201,6 +211,21 @@
   window — 30 days at minimum — to take a complete copy of your
   chain's data with you. Your data and your keys are never
   deleted by Twin.</p>
+
+  <h3>What happens if my chain is severed?</h3>
+  <p><a href="glossary.html#severance">Severance</a> is
+  de-listing and de-anchoring only, as the
+  <a href="joining-terms.html">joining terms summary</a>
+  states: Twin removes the chain from its registry, wallet
+  and explorer surfaces and stops anchoring it — and that
+  is all. There is no pause button and no kill switch: the
+  chain keeps existing for anyone who runs its nodes.
+  Before a severance for cause takes effect you get notice
+  and the guaranteed <a href="glossary.html#export">export</a>
+  window — 30 days at minimum — and your data and keys are
+  never deleted. For sanctions or illegality, de-anchoring
+  is immediate and the notice comes after; the export
+  window still stands.</p>
 
   <h3>Can I start my own blockchain on Twin today?</h3>
   <p>Not yet — and this site will not pretend otherwise. The tools
